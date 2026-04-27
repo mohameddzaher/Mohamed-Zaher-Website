@@ -11,11 +11,26 @@ import { env } from "../config/env";
 
 const router = Router();
 
+/**
+ * Cookie config.
+ *
+ * In production the API and the web app live on different parent domains
+ * (Render vs Netlify), so the browser treats requests between them as
+ * cross-site. To keep the auth cookies on follow-up XHR requests we need
+ * `SameSite=None; Secure`. SameSite=Lax would silently drop the cookie
+ * on every cross-site fetch and the user would appear "logged out"
+ * immediately after logging in.
+ *
+ * In development everything runs on http://localhost so we fall back to
+ * Lax (browsers reject SameSite=None without Secure on plain HTTP).
+ *
+ * The domain attribute is intentionally NOT set: the browser binds the
+ * cookie to the issuing host (the API host) which is exactly what we want.
+ */
 const cookieBase = {
   httpOnly: true,
-  sameSite: "lax" as const,
+  sameSite: env.COOKIE_SECURE ? ("none" as const) : ("lax" as const),
   secure: env.COOKIE_SECURE,
-  domain: env.COOKIE_DOMAIN === "localhost" ? undefined : env.COOKIE_DOMAIN,
   path: "/",
 };
 

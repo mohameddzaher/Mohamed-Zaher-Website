@@ -57,12 +57,14 @@ export function Skills({ tone = "light" }: { tone?: "dark" | "light" }) {
                       </span>
                     </div>
                     <div className="h-1 rounded-full bg-[var(--section-panel)] overflow-hidden">
+                      {/* scaleX is composited — won't trigger layout per frame */}
                       <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${s.level}%` }}
+                        style={{ width: `${s.level}%`, originX: 0 }}
+                        initial={{ scaleX: 0 }}
+                        whileInView={{ scaleX: 1 }}
                         viewport={{ once: true, amount: 0.15, margin: "-60px" }}
                         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-                        className="h-full bg-gradient-to-r from-[var(--color-gold-400)] to-[var(--color-gold-600)]"
+                        className="h-full bg-gradient-to-r from-[var(--color-gold-400)] to-[var(--color-gold-600)] will-change-transform"
                       />
                     </div>
                   </div>

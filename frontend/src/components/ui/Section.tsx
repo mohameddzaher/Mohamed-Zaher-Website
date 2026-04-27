@@ -31,7 +31,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative py-24 md:py-32",
+        "relative py-24 md:py-32 [content-visibility:auto] [contain-intrinsic-size:1px_900px]",
         tone === "light" ? "section-light" : "section-dark",
         className,
       )}

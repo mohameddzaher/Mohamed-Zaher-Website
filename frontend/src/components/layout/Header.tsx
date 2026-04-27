@@ -97,15 +97,16 @@ export function Header() {
   if (inAppShell) return null;
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 py-3">
-      <div className="container-x">
-        <div
-          className={cn(
-            "flex h-12 items-center justify-between gap-4 px-3 md:px-4 rounded-xl",
-            "transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
-            scrolled ? "glass-strong" : "bg-transparent border border-transparent",
-          )}
-        >
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 transition-[background-color,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+        scrolled
+          ? "bg-[var(--bg)] border-b border-[var(--border)] shadow-[0_8px_24px_-12px_rgba(0,0,0,0.45)]"
+          : "bg-transparent border-b border-transparent",
+      )}
+    >
+      <div className="container-x py-3">
+        <div className="flex h-12 items-center justify-between gap-4 px-3 md:px-4">
           <Link
             href="/"
             className="group inline-flex items-baseline select-none"

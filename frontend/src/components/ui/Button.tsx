@@ -22,15 +22,16 @@ const variants: Record<Variant, string> = {
   // Reserved for the Hero CTA — keeps the rose primary
   primary:
     "rounded-full font-medium text-white shadow-[0_4px_16px_-4px_var(--color-brand-600)] hover:shadow-[0_8px_28px_-6px_var(--color-brand-600)] [background:linear-gradient(135deg,var(--color-brand-500),var(--color-brand-700))] hover:brightness-110",
-  // The new default for non-hero CTAs — champagne hairline
+  // Default for non-hero CTAs — champagne hairline. Uses --section-accent
+  // so the text reads on both dark (gold-400) and light (gold-600) tones.
   luxury:
-    "rounded-full font-light tracking-[0.18em] uppercase text-[var(--color-gold-200)] border border-[var(--color-gold-400)]/40 hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-100)] hover:bg-[color-mix(in_srgb,var(--color-gold-400)_8%,transparent)]",
+    "rounded-full font-light tracking-[0.18em] uppercase text-[var(--section-accent)] border border-[var(--section-accent)]/40 hover:border-[var(--section-accent)] hover:bg-[color-mix(in_srgb,var(--section-accent)_10%,transparent)]",
   secondary:
-    "rounded-full font-light tracking-wide text-[var(--section-fg)] border border-[var(--section-border)] hover:border-[var(--color-gold-400)]/50",
+    "rounded-full font-light tracking-wide text-[var(--section-fg)] border border-[var(--section-border)] hover:border-[var(--section-accent)]/50",
   ghost:
     "rounded-full font-light tracking-wide bg-transparent text-[var(--section-fg)] hover:bg-[var(--section-panel)]",
   outline:
-    "rounded-full font-light tracking-wide border border-[var(--section-border)] bg-transparent text-[var(--section-fg)] hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-300)]",
+    "rounded-full font-light tracking-wide border border-[var(--section-border)] bg-transparent text-[var(--section-fg)] hover:border-[var(--section-accent)] hover:text-[var(--section-accent)]",
   danger:
     "rounded-full font-medium bg-red-700 text-white hover:bg-red-800",
 };
