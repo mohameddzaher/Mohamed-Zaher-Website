@@ -1,0 +1,285 @@
+{
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "ventures": "Ventures",
+    "projects": "Projects",
+    "experience": "Experience",
+    "insights": "Insights",
+    "contact": "Contact",
+    "book": "Book a Meeting",
+    "client_portal": "Client Portal",
+    "lets_talk": "Start a Conversation"
+  },
+  "HeaderMenu": {
+    "sign_in": "Sign in",
+    "sign_out": "Sign out",
+    "dashboard": "Dashboard",
+    "profile": "Profile",
+    "settings": "Settings"
+  },
+  "Hero": {
+    "badge": "entrepreneur",
+    "name": "Mohamed Zaher",
+    "subtitle": "Entrepreneur • CTO • Full-Stack Engineer",
+    "tagline": "Merging Tech & Business for Scalable Growth.",
+    "description": "Driving business growth through strategy, partnerships, and execution. CTO at ETS, founder at Tapix Electronics & Dida Silver, account manager for Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker through Energize Logistics. Open for investments, partnerships, and the next bold bet.",
+    "cta_primary": "Start a Conversation",
+    "cta_secondary": "Explore What I Build",
+    "stats": {
+      "projects": "Projects Delivered",
+      "experience": "Years Building",
+      "companies": "Ventures Led",
+      "clients": "LinkedIn Followers"
+    },
+    "scroll": "Explore",
+    "open_badge": "Open"
+  },
+  "About": {
+    "eyebrow": "About Me",
+    "title": "Engineer by craft. |Entrepreneur by mindset.",
+    "pageHeaderDescription": "1999. 30+ projects. Four ventures. Always building.",
+    "lead": "I'm Mohamed Zaher — a tech entrepreneur driving business growth through strategy, partnerships, and execution. I bring an entrepreneurial mindset that combines commercial vision with deep technology understanding — turning market opportunities into well-structured businesses, platforms, and long-term value, with technology positioned as a core enabler. CTO at ETS, founder at Tapix Electronics and Dida Silver, BD consultant at Gulf Trend, and account manager for Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker through Energize Logistics. I'm always exploring new ventures, investments, and strategic partnerships — if you have capital looking for a founder, a problem looking for a builder, or a vision looking for execution, let's talk.",
+    "quote": "Code solves problems. Business scales solutions.",
+    "values": ["Strategy", "Execution", "Tech + Business", "Partnerships", "Always Learning"],
+    "view_full": "Read full bio",
+    "status_open": "Open for new ventures"
+  },
+  "Ventures": {
+    "eyebrow": "Ventures",
+    "title": "Companies I |Build & Lead",
+    "description": "Active ventures across SaaS, e-commerce, logistics, and consulting.",
+    "visit": "Visit",
+    "view_all": "View all ventures"
+  },
+  "Opportunities": {
+    "eyebrow": "Let's Build Together",
+    "title": "Open for |Opportunities",
+    "description": "Capital, partnerships, collaboration, or advisory — pick any door.",
+    "cta": "Let's Talk",
+    "cards": {
+      "invest": {
+        "title": "Investment Opportunities",
+        "desc": "Looking for capital to scale existing ventures or launch new ones. Equity, angel, or strategic."
+      },
+      "partner": {
+        "title": "Strategic Partnerships",
+        "desc": "Open to co-founding, joint ventures, and distribution partnerships across MENA & GCC."
+      },
+      "startup": {
+        "title": "Startup Collaboration",
+        "desc": "Building something in Tech, SaaS, E-commerce, or Logistics? I bring tech + business execution."
+      },
+      "advisory": {
+        "title": "Consulting & Advisory",
+        "desc": "Board advisory, technical consulting, and business development retainers — available."
+      }
+    }
+  },
+  "Skills": {
+    "eyebrow": "Capabilities",
+    "title": "Three tracks. |One operator.",
+    "description": "I work the full stack — engineering, business, and people.",
+    "tracks": {
+      "engineering": "Software Engineering",
+      "business": "Business & Entrepreneurship",
+      "leadership": "Leadership & Soft Skills"
+    }
+  },
+  "Experience": {
+    "eyebrow": "Experience",
+    "title": "A timeline of |building.",
+    "description": "Roles, ventures, and teaching engagements — with the capability tracks that back them.",
+    "highlights": "Highlights",
+    "present": "Present",
+    "view_all": "View full timeline"
+  },
+  "Projects": {
+    "eyebrow": "Selected Work",
+    "title": "Projects & |Platforms",
+    "description": "Production systems, e-commerce platforms, real estate marketplaces, internal tools.",
+    "filters": {
+      "all": "All",
+      "web": "Web Apps",
+      "ecommerce": "E-Commerce",
+      "business": "Business Platforms",
+      "realestate": "Real Estate",
+      "edtech": "EdTech"
+    },
+    "live_demo": "Live Demo",
+    "source": "Source",
+    "case_study": "Case Study",
+    "view_all": "View all projects",
+    "view_more": "Show all projects",
+    "search": "Search projects…",
+    "featured": "Featured"
+  },
+  "ProjectDetail": {
+    "overview": "Overview",
+    "tech_stack": "Tech stack",
+    "visit_live": "Live demo",
+    "view_source": "View source",
+    "all_projects": "All projects"
+  },
+  "VentureDetail": {
+    "visit_site": "Visit site",
+    "partner_cta": "Partner on this venture",
+    "all": "All ventures"
+  },
+  "Certifications": {
+    "eyebrow": "Credentials",
+    "title": "Certifications & |Programs"
+  },
+  "Speaking": {
+    "eyebrow": "Speaking & Teaching",
+    "title": "On stages and |in classrooms",
+    "description": "Sharing what I've learned with the next generation of builders."
+  },
+  "Clients": {
+    "eyebrow": "Trusted By",
+    "title": "Clients & Partners"
+  },
+  "Testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What people say"
+  },
+  "Booking": {
+    "eyebrow": "Book a Meeting",
+    "title": "Pick a time. Let's talk.",
+    "description": "30–60 minute slots, video / phone / in-person. Confirmed instantly.",
+    "step": {
+      "date": "Date",
+      "slot": "Time",
+      "details": "Details",
+      "done": "Done"
+    },
+    "continue": "Continue",
+    "change_date": "Change date",
+    "change_slot": "Change time",
+    "pick_slot": "Pick an available time slot.",
+    "loading": "Loading slots…",
+    "day_off": "I'm off this day. Pick another.",
+    "taken": "Booked",
+    "confirm": "Confirm booking",
+    "success": "Booked. See you then.",
+    "error": "Couldn't book. Try again.",
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "subject": "What's it about?",
+      "message": "Anything I should know before we meet?",
+      "type": "How do you want to meet?"
+    },
+    "meeting_type": {
+      "video": "Video call",
+      "phone": "Phone call",
+      "in-person": "In person"
+    },
+    "done": {
+      "title": "You're booked.",
+      "body": "I'll send a calendar invite to your email shortly. Looking forward to it.",
+      "again": "Book another time"
+    }
+  },
+  "ReviewForm": {
+    "cta": "Write a review",
+    "title": "Share your thoughts",
+    "hint": "Reviews are moderated. Approved ones appear on this page.",
+    "name": "Your name",
+    "role": "Role (optional)",
+    "company": "Company (optional)",
+    "email": "Email (optional, not published)",
+    "email_hint": "Only used to follow up if needed.",
+    "rating": "Rating",
+    "quote": "Your review",
+    "submit": "Submit review",
+    "cancel": "Cancel",
+    "success": "Thank you! Your review has been submitted for review.",
+    "error": "Couldn't submit. Try again."
+  },
+  "News": {
+    "eyebrow": "Insights",
+    "title": "Notes on building",
+    "empty": "More insights coming soon.",
+    "read_more": "Read",
+    "published_on": "Published"
+  },
+  "Newsletter": {
+    "eyebrow": "Newsletter",
+    "title": "Join my journey",
+    "description": "Occasional notes on building products, scaling teams, and navigating the tech-business intersection.",
+    "placeholder": "you@example.com",
+    "cta": "Subscribe",
+    "success": "You're in. Welcome aboard.",
+    "error": "Something went wrong. Try again?"
+  },
+  "Contact": {
+    "eyebrow": "Get in touch",
+    "title": "Let's build |something together",
+    "description": "Tell me about your idea, your capital, or the problem you need solved.",
+    "send_another": "Send another",
+    "form": {
+      "name": "Your name",
+      "email": "Email",
+      "company": "Company (optional)",
+      "subject": "Subject",
+      "budget": "Budget range",
+      "inquiry": "Inquiry type",
+      "type": "Project type",
+      "message": "Tell me about it",
+      "submit": "Send message",
+      "success": "Got it. I'll be in touch within 24 hours.",
+      "error": "Couldn't send. Please try again."
+    },
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "availability": "Availability",
+      "response": "Usually within 24 hours",
+      "response_label": "Response",
+      "portrait_line": "Currently traveling. Reach me anywhere — I'm just a message away.",
+      "portrait_role": "Entrepreneur · CTO",
+      "find_me": "Find me on",
+      "whatsapp_label": "WhatsApp",
+      "whatsapp_hint": "Tap to chat directly"
+    },
+    "budgets": ["< $5k", "$5k – $15k", "$15k – $50k", "$50k – $100k", "$100k+"],
+    "inquiries": [
+      "Investment Opportunity",
+      "Partnership Proposal",
+      "Consulting Request",
+      "Project Inquiry",
+      "Speaking Engagement",
+      "General Message"
+    ],
+    "types": ["Web App", "E-Commerce", "SaaS Platform", "Mobile App", "Consulting", "Other"]
+  },
+  "PageHeaders": {
+    "about": { "title": "Engineer by craft. |Entrepreneur by mindset.", "description": "1999. 30+ projects. Four ventures. Always building." },
+    "ventures": { "title": "Companies I |Build & Lead", "description": "Active ventures across SaaS, e-commerce, logistics, and consulting — with partnerships including Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker." },
+    "projects": { "title": "Projects & |Platforms", "description": "Production systems, e-commerce storefronts, real estate marketplaces, EdTech apps, and internal business tools." },
+    "experience": { "title": "A timeline of |building.", "description": "Roles, ventures, and teaching engagements — with the capability tracks that back them." },
+    "insights": { "title": "Notes from |the build", "description": "Lessons from shipping products, running ventures, and operating across KSA, Egypt, and the GCC." },
+    "contact": { "title": "Let's build |something together", "description": "Tell me about your idea, your capital, or the problem you need solved. Usually within 24 hours." },
+    "book": { "title": "Pick a time. |Let's talk.", "description": "Choose any open slot — confirmation is instant." }
+  },
+  "Footer": {
+    "tagline": "Building. Scaling. Always open.",
+    "description": "Tech entrepreneur and full-stack engineer actively building across SaaS, e-commerce, and logistics. Open for investment, partnership, and collaboration.",
+    "navigate": "Navigate",
+    "contact_label": "Contact",
+    "follow_me": "Follow",
+    "rights": "All rights reserved.",
+    "built_with": "Built with care by Mohamed Zaher"
+  },
+  "Breadcrumb": {
+    "home": "Home"
+  },
+  "Common": {
+    "back": "Back",
+    "loading": "Loading…",
+    "coming_soon": "This insight hasn't been published yet."
+  }
+}

@@ -1,0 +1,49 @@
+[build]
+  base = "frontend"
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NPM_FLAGS = "--legacy-peer-deps"
+  NEXT_TELEMETRY_DISABLED = "1"
+
+# Official Next.js plugin — handles SSR, ISR, image optimization, edge middleware
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Long cache for hashed Next.js static bundles
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Long cache for image assets in /public/images
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache OG endpoint at the edge
+[[headers]]
+  for = "/api/og"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"
+
+# Sensible defaults for HTML — let Next-intl handle locale routing
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+
+# Production context
+[context.production.environment]
+  NODE_ENV = "production"
+
+# Deploy preview context
+[context.deploy-preview.environment]
+  NODE_ENV = "production"

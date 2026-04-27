@@ -1,0 +1,77 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Build output
+.next/
+out/
+dist/
+build/
+
+# Environment / secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+!.env.example
+
+# Local-only credentials reference (NEVER commit real passwords)
+CREDENTIALS.md
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Misc
+.cache/
+.turbo/
+*.tsbuildinfo
+.next-types
+.tsbuildinfo
+
+# Uploads (local)
+uploads/
+
+# Sourcemaps
+*.map
+
+# Sentry / monitoring
+.sentryclirc
+
+# Workspace files
+.sixth/
+
+# Netlify / Render local
+.netlify/
+.render-buildlogs/
+
+# Misc auth caches
+.claude/
