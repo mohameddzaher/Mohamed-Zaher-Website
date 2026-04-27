@@ -81,7 +81,7 @@ export default function ContactInbox() {
           <h1 className="font-display text-3xl font-bold tracking-tight inline-flex items-center gap-3">
             Inbox
             {newCount > 0 && (
-              <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-[var(--color-brand-500)]/15 text-[var(--color-brand-400)] border border-[var(--color-brand-500)]/30">
+              <span className="text-xs font-mono px-2 py-0.5 rounded-full bg-[var(--color-gold-400)]/15 text-[var(--color-gold-300)] border border-[var(--color-gold-400)]/30">
                 {newCount} new
               </span>
             )}
@@ -109,7 +109,7 @@ export default function ContactInbox() {
             className={cn(
               "px-3 py-2 text-xs font-medium uppercase tracking-widest transition-colors whitespace-nowrap",
               tab === s
-                ? "text-[var(--color-brand-500)] border-b-2 border-[var(--color-brand-500)]"
+                ? "text-[var(--color-gold-400)] border-b-2 border-[var(--color-gold-400)]"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]",
             )}
           >
@@ -141,7 +141,7 @@ export default function ContactInbox() {
               key={m._id}
               className={cn(
                 "p-5 space-y-3",
-                m.status === "new" && "border-l-2 border-l-[var(--color-brand-500)]",
+                m.status === "new" && "border-l-2 border-l-[var(--color-gold-400)]",
               )}
             >
               <div className="flex items-start justify-between gap-4 flex-wrap">
@@ -154,7 +154,7 @@ export default function ContactInbox() {
                     {m.inquiry && <Badge variant="violet">{m.inquiry}</Badge>}
                   </div>
                   <p className="text-xs text-[var(--fg-muted)] font-mono mt-1">
-                    <a href={`mailto:${m.email}`} className="hover:text-[var(--color-brand-400)]">{m.email}</a>
+                    <a href={`mailto:${m.email}`} className="hover:text-[var(--color-gold-300)]">{m.email}</a>
                     {m.company && <span> · {m.company}</span>}
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export default function ContactInbox() {
               <div className="flex items-center gap-2 pt-3 border-t border-[var(--border)] flex-wrap">
                 <a
                   href={`mailto:${m.email}?subject=Re: ${encodeURIComponent(m.subject)}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-md bg-[var(--color-brand-500)]/15 border border-[var(--color-brand-500)]/30 text-[var(--color-brand-400)] hover:bg-[var(--color-brand-500)]/25"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-md bg-[var(--color-gold-400)]/15 border border-[var(--color-gold-400)]/30 text-[var(--color-gold-300)] hover:bg-[var(--color-gold-400)]/25"
                   onClick={() => update.mutate({ id: m._id, status: "replied" })}
                 >
                   <Mail className="h-3 w-3" /> Reply
@@ -194,7 +194,7 @@ export default function ContactInbox() {
                   <button
                     type="button"
                     onClick={() => update.mutate({ id: m._id, status: "archived" })}
-                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-brand-500)]/40"
+                    className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-gold-400)]/40"
                   >
                     <Archive className="h-3 w-3" /> Archive
                   </button>

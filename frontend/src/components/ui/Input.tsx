@@ -17,12 +17,12 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & BaseFieldProps;
  * Uses the --section-* tokens from globals.css.
  */
 const fieldBase =
-  "w-full rounded-lg border px-3 py-2 text-sm transition-all duration-150 " +
-  "bg-[color-mix(in_srgb,var(--section-fg)_5%,transparent)] " +
+  "w-full rounded-lg border px-3.5 py-2.5 text-sm font-light transition-all duration-300 " +
+  "bg-[color-mix(in_srgb,var(--section-fg)_3%,transparent)] " +
   "border-[var(--section-border)] " +
   "text-[var(--section-fg)] " +
-  "placeholder:text-[var(--section-muted)] " +
-  "focus:outline-none focus:border-[var(--color-brand-500)] focus:bg-[color-mix(in_srgb,var(--section-fg)_8%,transparent)] focus:ring-2 focus:ring-[var(--color-brand-500)]/20";
+  "placeholder:text-[var(--section-muted)] placeholder:font-light " +
+  "focus:outline-none focus:border-[var(--color-gold-400)]/60 focus:bg-[color-mix(in_srgb,var(--section-fg)_5%,transparent)] focus:ring-1 focus:ring-[var(--color-gold-400)]/20";
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ className, label, error, hint, id, type, ...props }, ref) => {
@@ -34,7 +34,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="flex flex-col gap-1">
         {label && (
-          <label htmlFor={inputId} className="text-xs font-medium text-[var(--section-fg)]">
+          <label htmlFor={inputId} className="text-[10px] font-light uppercase tracking-[0.2em] text-[var(--section-muted)]">
             {label}
           </label>
         )}
@@ -57,7 +57,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
               tabIndex={-1}
               onClick={() => setRevealed((r) => !r)}
               aria-label={revealed ? "Hide password" : "Show password"}
-              className="absolute inset-y-0 right-2 inline-flex items-center justify-center w-7 text-[var(--section-muted)] hover:text-[var(--color-brand-600)] transition-colors duration-150"
+              className="absolute inset-y-0 right-2 inline-flex items-center justify-center w-7 text-[var(--section-muted)] hover:text-[var(--color-gold-300)] transition-colors duration-150"
             >
               {revealed ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
             </button>
@@ -79,7 +79,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <div className="flex flex-col gap-1">
         {label && (
-          <label htmlFor={inputId} className="text-xs font-medium text-[var(--section-fg)]">
+          <label htmlFor={inputId} className="text-[10px] font-light uppercase tracking-[0.2em] text-[var(--section-muted)]">
             {label}
           </label>
         )}
@@ -113,7 +113,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
     return (
       <div className="flex flex-col gap-1">
         {label && (
-          <label htmlFor={inputId} className="text-xs font-medium text-[var(--section-fg)]">
+          <label htmlFor={inputId} className="text-[10px] font-light uppercase tracking-[0.2em] text-[var(--section-muted)]">
             {label}
           </label>
         )}

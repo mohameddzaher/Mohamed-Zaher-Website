@@ -30,7 +30,7 @@ export function PageLoader() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-[-24px] rounded-full border border-[var(--color-brand-400)]/40"
+              className="absolute inset-[-24px] rounded-full border border-[var(--color-gold-300)]/40"
             />
             <motion.div
               animate={{ rotate: -360 }}
@@ -41,7 +41,7 @@ export function PageLoader() {
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="h-20 w-20 rounded-2xl bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-violet-500)] flex items-center justify-center font-display text-3xl font-black text-[#050507] shadow-[0_0_60px_-10px_var(--color-brand-400)]"
+              className="h-20 w-20 rounded-2xl bg-gradient-to-br from-[var(--color-gold-300)] to-[var(--color-violet-500)] flex items-center justify-center font-display text-3xl font-black text-[#050507] shadow-[0_0_60px_-10px_var(--color-gold-300)]"
             >
               MZ
             </motion.div>

@@ -142,7 +142,7 @@ export default function AdminDashboard() {
               <p className="text-xs uppercase tracking-widest text-[var(--fg-muted)] font-mono">
                 {label}
               </p>
-              <Icon className="h-4 w-4 text-[var(--color-brand-500)]" />
+              <Icon className="h-4 w-4 text-[var(--color-gold-400)]" />
             </div>
             <p className="font-display text-3xl font-bold">
               {isLoading ? "—" : value}
@@ -156,12 +156,12 @@ export default function AdminDashboard() {
         <Card className="p-5">
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-display text-base font-semibold inline-flex items-center gap-2">
-              <CalendarClock className="h-4 w-4 text-[var(--color-brand-500)]" />
+              <CalendarClock className="h-4 w-4 text-[var(--color-gold-400)]" />
               Upcoming bookings
             </h2>
             <Link
               href="/admin/bookings"
-              className="text-[10px] font-mono text-[var(--color-brand-400)] inline-flex items-center gap-1 hover:gap-1.5 transition-all"
+              className="text-[10px] font-mono text-[var(--color-gold-300)] inline-flex items-center gap-1 hover:gap-1.5 transition-all"
             >
               View all <ArrowRight className="h-3 w-3" />
             </Link>
@@ -176,7 +176,7 @@ export default function AdminDashboard() {
                 <li key={b._id}>
                   <Link
                     href={`/admin/bookings/${b._id}`}
-                    className="block panel rounded-lg p-3 hover:border-[var(--color-brand-500)]/40 transition-colors"
+                    className="block panel rounded-lg p-3 hover:border-[var(--color-gold-400)]/40 transition-colors"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <div className="min-w-0">
@@ -197,7 +197,7 @@ export default function AdminDashboard() {
         <Card className="p-5">
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-display text-base font-semibold inline-flex items-center gap-2">
-              <ListChecks className="h-4 w-4 text-[var(--color-brand-500)]" />
+              <ListChecks className="h-4 w-4 text-[var(--color-gold-400)]" />
               Today + overdue
               {taskSummary && taskSummary.overdue.length > 0 && (
                 <span className="inline-flex items-center gap-1 text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-red-500/15 text-red-400 border border-red-500/30">
@@ -207,7 +207,7 @@ export default function AdminDashboard() {
             </h2>
             <Link
               href="/admin/tasks"
-              className="text-[10px] font-mono text-[var(--color-brand-400)] inline-flex items-center gap-1 hover:gap-1.5 transition-all"
+              className="text-[10px] font-mono text-[var(--color-gold-300)] inline-flex items-center gap-1 hover:gap-1.5 transition-all"
             >
               View all <ArrowRight className="h-3 w-3" />
             </Link>
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
                     <Link
                       href="/admin/tasks"
                       className={cn(
-                        "block panel rounded-lg p-3 hover:border-[var(--color-brand-500)]/40 transition-colors",
+                        "block panel rounded-lg p-3 hover:border-[var(--color-gold-400)]/40 transition-colors",
                         isOverdue && "border-red-500/30",
                       )}
                     >

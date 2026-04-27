@@ -90,7 +90,7 @@ export function ResourceTable<T extends { _id?: string; id?: string }>({
                           <button
                             onClick={() => onEdit(row)}
                             aria-label="Edit"
-                            className="p-2 rounded-lg hover:bg-white/[0.06] text-[var(--fg-muted)] hover:text-[var(--color-brand-400)]"
+                            className="p-2 rounded-lg hover:bg-white/[0.06] text-[var(--fg-muted)] hover:text-[var(--color-gold-300)]"
                           >
                             <Pencil className="h-3.5 w-3.5" />
                           </button>

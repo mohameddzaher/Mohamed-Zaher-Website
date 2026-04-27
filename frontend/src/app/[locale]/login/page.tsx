@@ -45,7 +45,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center px-4 py-20">
       <div className="w-full max-w-md glass-strong rounded-3xl p-8 md:p-10">
         <div className="text-center mb-8">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-violet-500)] mb-4">
+          <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--color-gold-300)] to-[var(--color-violet-500)] mb-4">
             <Lock className="h-5 w-5 text-[#050507]" />
           </div>
           <h1 className="font-display text-3xl font-bold">Sign in</h1>

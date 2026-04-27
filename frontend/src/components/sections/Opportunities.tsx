@@ -52,10 +52,10 @@ export function Opportunities({ tone = "dark" }: { tone?: "dark" | "light" }) {
           >
             <Link
               href={`/contact?subject=${encodeURIComponent(subject)}`}
-              className="group block panel rounded-xl p-5 h-full transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--color-brand-500)]/40 hover:shadow-[0_8px_24px_-10px_var(--color-brand-600)]"
+              className="group block panel rounded-xl p-5 h-full transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--color-gold-400)]/40 hover:shadow-[0_8px_24px_-10px_var(--color-gold-500)]"
             >
-              <div className="h-10 w-10 rounded-lg bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30 flex items-center justify-center mb-3">
-                <Icon className="h-4 w-4 text-[var(--color-brand-600)]" />
+              <div className="h-10 w-10 rounded-lg bg-[var(--color-gold-400)]/10 border border-[var(--color-gold-400)]/30 flex items-center justify-center mb-3">
+                <Icon className="h-4 w-4 text-[var(--color-gold-500)]" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-1.5 text-[var(--section-fg)]">
                 {t(`cards.${key}.title`)}
@@ -63,7 +63,7 @@ export function Opportunities({ tone = "dark" }: { tone?: "dark" | "light" }) {
               <p className="text-sm text-[var(--section-muted)] leading-relaxed">
                 {t(`cards.${key}.desc`)}
               </p>
-              <div className="mt-4 pt-3 border-t border-[var(--section-border)] flex items-center justify-between text-xs font-medium text-[var(--color-brand-600)] group-hover:gap-2 transition-all">
+              <div className="mt-4 pt-3 border-t border-[var(--section-border)] flex items-center justify-between text-xs font-medium text-[var(--color-gold-500)] group-hover:gap-2 transition-all">
                 <span>{t("cta")}</span>
                 <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>

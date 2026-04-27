@@ -45,7 +45,7 @@ export function About({
               className="object-cover object-[center_15%]"
               priority
             />
-            <div className="absolute inset-0 ring-1 ring-inset ring-[var(--color-brand-500)]/20 rounded-2xl" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-[var(--color-gold-400)]/20 rounded-2xl" />
             <div className="absolute bottom-3 left-3 right-3 glass rounded-lg p-2.5 flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-70" />
@@ -63,7 +63,7 @@ export function About({
             {t("lead")}
           </p>
 
-          <blockquote className="relative pl-4 border-l-2 border-[var(--color-brand-500)] py-1 italic text-lg md:text-xl font-display text-gradient">
+          <blockquote className="relative pl-4 border-l-2 border-[var(--color-gold-400)] py-1 italic text-lg md:text-xl font-display text-gradient">
             &ldquo;{t("quote")}&rdquo;
           </blockquote>
 

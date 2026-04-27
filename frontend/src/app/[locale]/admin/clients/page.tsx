@@ -47,9 +47,9 @@ export default function AdminClientsPage() {
       render: (r) => (
         <Link
           href={`/admin/clients/${r._id}`}
-          className="flex items-center gap-2 hover:text-[var(--color-brand-400)] transition-colors"
+          className="flex items-center gap-2 hover:text-[var(--color-gold-300)] transition-colors"
         >
-          <span className="h-8 w-8 rounded-lg bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-violet-500)] flex items-center justify-center text-xs font-bold text-[#050507]">
+          <span className="h-8 w-8 rounded-lg bg-gradient-to-br from-[var(--color-gold-300)] to-[var(--color-violet-500)] flex items-center justify-center text-xs font-bold text-[#050507]">
             {r.name.split(" ").map((s) => s[0]).slice(0, 2).join("")}
           </span>
           <div>

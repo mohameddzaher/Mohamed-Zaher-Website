@@ -105,7 +105,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                   onClick={() => setActiveTag("all")}
                   className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition ${
                     activeTag === "all"
-                      ? "bg-[var(--color-brand-600)] text-white"
+                      ? "bg-[var(--color-gold-500)] text-white"
                       : "panel text-[var(--section-muted)] hover:text-[var(--section-fg)]"
                   }`}
                 >
@@ -118,7 +118,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                     onClick={() => setActiveTag(tg)}
                     className={`shrink-0 px-3 py-1.5 rounded-full text-xs font-medium transition ${
                       activeTag === tg
-                        ? "bg-[var(--color-brand-600)] text-white"
+                        ? "bg-[var(--color-gold-500)] text-white"
                         : "panel text-[var(--section-muted)] hover:text-[var(--section-fg)]"
                     }`}
                   >
@@ -135,7 +135,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-              className="panel rounded-2xl overflow-hidden grid md:grid-cols-2 gap-0 group hover:border-[var(--color-brand-500)]/30 transition-colors"
+              className="panel rounded-2xl overflow-hidden grid md:grid-cols-2 gap-0 group hover:border-[var(--color-gold-400)]/30 transition-colors"
             >
               <Link
                 href={`/insights/${featured.slug}`}
@@ -159,7 +159,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                   {formatDate(featured.publishedAt)}
                 </div>
                 <Link href={`/insights/${featured.slug}`}>
-                  <h2 className="font-display text-xl md:text-2xl font-bold leading-tight mb-2 hover:text-[var(--color-brand-600)] transition-colors">
+                  <h2 className="font-display text-xl md:text-2xl font-bold leading-tight mb-2 hover:text-[var(--color-gold-500)] transition-colors">
                     {localize(featured.title)}
                   </h2>
                 </Link>
@@ -168,7 +168,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                 </p>
                 <Link
                   href={`/insights/${featured.slug}`}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-brand-600)] hover:gap-1.5 transition-all"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-[var(--color-gold-500)] hover:gap-1.5 transition-all"
                 >
                   {t("read_more")}
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -187,7 +187,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15, margin: "-60px" }}
                   transition={{ duration: 0.28, delay: i * 0.03 }}
-                  className="panel rounded-xl overflow-hidden hover:border-[var(--color-brand-500)]/30 transition-colors duration-200 group"
+                  className="panel rounded-xl overflow-hidden hover:border-[var(--color-gold-400)]/30 transition-colors duration-200 group"
                 >
                   <Link href={`/insights/${post.slug}`}>
                     <div className="relative aspect-video overflow-hidden bg-[var(--section-panel)]">
@@ -210,7 +210,7 @@ export function InsightsBoard({ tone = "light" }: { tone?: "dark" | "light" }) {
                       <p className="text-xs text-[var(--section-muted)] line-clamp-2">
                         {localize(post.excerpt)}
                       </p>
-                      <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--color-brand-600)] group-hover:gap-1.5 transition-all">
+                      <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--color-gold-500)] group-hover:gap-1.5 transition-all">
                         {t("read_more")} <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>

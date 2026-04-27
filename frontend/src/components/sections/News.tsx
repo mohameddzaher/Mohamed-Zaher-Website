@@ -56,7 +56,7 @@ export function News({ tone = "dark", limit = 3 }: { tone?: "dark" | "light"; li
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15, margin: "-60px" }}
               transition={{ duration: 0.28, delay: i * 0.03 }}
-              className="panel rounded-xl overflow-hidden hover:border-[var(--color-brand-500)]/30 transition-colors duration-200 group"
+              className="panel rounded-xl overflow-hidden hover:border-[var(--color-gold-400)]/30 transition-colors duration-200 group"
             >
               <Link href={`/insights/${post.slug}`}>
                 <div className="relative aspect-video overflow-hidden bg-[var(--section-panel)]">
@@ -79,7 +79,7 @@ export function News({ tone = "dark", limit = 3 }: { tone?: "dark" | "light"; li
                   <p className="text-xs text-[var(--section-muted)] line-clamp-2">
                     {str(post.excerpt)}
                   </p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--color-brand-600)] group-hover:gap-1.5 transition-all">
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-[var(--color-gold-500)] group-hover:gap-1.5 transition-all">
                     {t("read_more")} <ArrowRight className="h-3 w-3" />
                   </span>
                 </div>

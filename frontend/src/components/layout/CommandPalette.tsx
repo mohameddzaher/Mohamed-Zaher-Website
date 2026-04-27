@@ -104,7 +104,7 @@ export function CommandPalette() {
                       onClick={() => go(a)}
                       className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm hover:bg-white/[0.04] transition-colors text-left"
                     >
-                      <Icon className="h-4 w-4 text-[var(--color-brand-400)]" />
+                      <Icon className="h-4 w-4 text-[var(--color-gold-300)]" />
                       <span className="flex-1">{a.label}</span>
                       <ArrowRight className="h-3.5 w-3.5 text-[var(--fg-muted)]" />
                     </button>

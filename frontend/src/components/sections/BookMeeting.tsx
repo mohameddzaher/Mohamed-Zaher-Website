@@ -160,9 +160,9 @@ export function BookMeeting({ tone = "light" }: { tone?: "dark" | "light" }) {
                   className={cn(
                     "h-6 w-6 inline-flex items-center justify-center rounded-full border text-[10px] transition-colors",
                     active
-                      ? "bg-[var(--color-brand-600)] text-white border-[var(--color-brand-600)]"
+                      ? "bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]"
                       : reached
-                        ? "border-[var(--color-brand-500)] text-[var(--color-brand-600)]"
+                        ? "border-[var(--color-gold-400)] text-[var(--color-gold-500)]"
                         : "border-[var(--section-border)] text-[var(--section-muted)]",
                   )}
                 >
@@ -223,9 +223,9 @@ export function BookMeeting({ tone = "light" }: { tone?: "dark" | "light" }) {
                       className={cn(
                         "px-3 py-2.5 rounded-lg text-sm font-medium border transition-all duration-150",
                         s.available
-                          ? "panel hover:border-[var(--color-brand-500)] hover:text-[var(--color-brand-600)] cursor-pointer"
+                          ? "panel hover:border-[var(--color-gold-400)] hover:text-[var(--color-gold-500)] cursor-pointer"
                           : s.isBooked
-                            ? "bg-[var(--color-brand-500)]/10 border-[var(--color-brand-500)]/20 text-[var(--section-muted)] line-through cursor-not-allowed"
+                            ? "bg-[var(--color-gold-400)]/10 border-[var(--color-gold-400)]/20 text-[var(--section-muted)] line-through cursor-not-allowed"
                             : "border-[var(--section-border)]/40 text-[var(--section-muted)]/40 cursor-not-allowed",
                       )}
                     >
@@ -252,10 +252,10 @@ export function BookMeeting({ tone = "light" }: { tone?: "dark" | "light" }) {
                 <ChevronLeft className="h-3 w-3" /> {t("change_slot")}
               </button>
               <div className="panel rounded-lg p-3 mb-5 flex items-center gap-3 text-sm">
-                <CalendarIcon className="h-4 w-4 text-[var(--color-brand-600)] shrink-0" />
+                <CalendarIcon className="h-4 w-4 text-[var(--color-gold-500)] shrink-0" />
                 <span className="font-medium">{fmtDay(date)}</span>
                 <span className="text-[var(--section-muted)]">·</span>
-                <Clock className="h-4 w-4 text-[var(--color-brand-600)] shrink-0" />
+                <Clock className="h-4 w-4 text-[var(--color-gold-500)] shrink-0" />
                 <span className="font-mono">{fmtTime(slot.startsAt)}</span>
                 <span className="text-[var(--section-muted)]">·</span>
                 <span className="text-xs text-[var(--section-muted)]">{slot.durationMin} min</span>
@@ -297,7 +297,7 @@ export function BookMeeting({ tone = "light" }: { tone?: "dark" | "light" }) {
                         className={cn(
                           "px-3 py-1.5 rounded-lg text-xs font-medium border inline-flex items-center gap-1.5 transition",
                           form.meetingType === key
-                            ? "bg-[var(--color-brand-600)] text-white border-[var(--color-brand-600)]"
+                            ? "bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)]"
                             : "panel text-[var(--section-muted)] hover:text-[var(--section-fg)]",
                         )}
                       >
@@ -338,10 +338,10 @@ export function BookMeeting({ tone = "light" }: { tone?: "dark" | "light" }) {
                 {t("done.body")}
               </p>
               <div className="panel rounded-lg p-3 mt-5 inline-flex items-center gap-3 text-sm">
-                <CalendarIcon className="h-4 w-4 text-[var(--color-brand-600)]" />
+                <CalendarIcon className="h-4 w-4 text-[var(--color-gold-500)]" />
                 {fmtDay(new Date(confirmation.startsAt))}
                 <span className="text-[var(--section-muted)]">·</span>
-                <Clock className="h-4 w-4 text-[var(--color-brand-600)]" />
+                <Clock className="h-4 w-4 text-[var(--color-gold-500)]" />
                 <span className="font-mono">{fmtTime(confirmation.startsAt)}</span>
               </div>
               <div className="mt-6">
@@ -416,7 +416,7 @@ function DatePicker({
                 setWeekStart(next);
               }
             }}
-            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-brand-500)]/40"
+            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-gold-400)]/40"
           >
             <ChevronLeft className="h-3.5 w-3.5" />
           </button>
@@ -428,7 +428,7 @@ function DatePicker({
               next.setUTCDate(weekStart.getUTCDate() + 14);
               setWeekStart(next);
             }}
-            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-brand-500)]/40"
+            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-gold-400)]/40"
           >
             <ChevronRight className="h-3.5 w-3.5" />
           </button>
@@ -449,10 +449,10 @@ function DatePicker({
               className={cn(
                 "aspect-square flex flex-col items-center justify-center rounded-lg text-xs border transition-all duration-150",
                 isSelected
-                  ? "bg-[var(--color-brand-600)] text-white border-[var(--color-brand-600)] shadow-[0_4px_14px_-4px_var(--color-brand-600)]"
+                  ? "bg-[var(--color-gold-500)] text-white border-[var(--color-gold-500)] shadow-[0_4px_14px_-4px_var(--color-gold-500)]"
                   : isPast
                     ? "border-[var(--section-border)]/40 text-[var(--section-muted)]/40 cursor-not-allowed"
-                    : "panel hover:border-[var(--color-brand-500)]/40",
+                    : "panel hover:border-[var(--color-gold-400)]/40",
               )}
             >
               <span className="text-[9px] uppercase tracking-widest opacity-70">
@@ -462,7 +462,7 @@ function DatePicker({
                 {d.getUTCDate()}
               </span>
               {isToday && !isSelected && (
-                <span className="block h-1 w-1 rounded-full bg-[var(--color-brand-500)] mt-0.5" />
+                <span className="block h-1 w-1 rounded-full bg-[var(--color-gold-400)] mt-0.5" />
               )}
             </button>
           );

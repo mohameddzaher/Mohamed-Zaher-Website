@@ -1,7 +1,7 @@
 /**
- * Renders a translated title with the text after `|` rendered in gradient.
- * e.g. "Projects & |Platforms" → "Projects & <span.text-gradient>Platforms</span>"
- * Works across locales — translators place the `|` wherever the accent word sits.
+ * Renders a translated title with the text after `|` rendered in the
+ * luxury champagne gradient (used for section headlines).
+ * e.g. "Projects & |Platforms" → "Projects & <span.text-gold>Platforms</span>"
  */
 export function GradientTitle({ raw }: { raw: string }) {
   const idx = raw.indexOf("|");
@@ -11,7 +11,7 @@ export function GradientTitle({ raw }: { raw: string }) {
   return (
     <>
       {before}
-      <span className="text-gradient">{highlight}</span>
+      <span className="text-gold italic">{highlight}</span>
     </>
   );
 }

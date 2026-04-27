@@ -46,7 +46,7 @@ export function Ventures({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15, margin: "-60px" }}
               transition={{ duration: 0.3, delay: i * 0.03, ease: [0.16, 1, 0.3, 1] }}
-              className="group panel rounded-xl overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-brand-500)]/40 hover:shadow-[0_8px_24px_-10px_var(--color-brand-600)] flex flex-col"
+              className="group panel rounded-xl overflow-hidden transition-all duration-200 hover:-translate-y-0.5 hover:border-[var(--color-gold-400)]/40 hover:shadow-[0_8px_24px_-10px_var(--color-gold-500)] flex flex-col"
             >
               <Link
                 href={`/ventures/${v.slug}`}
@@ -80,7 +80,7 @@ export function Ventures({
                 <div className="flex items-center justify-between pt-3 border-t border-[var(--section-border)] text-xs">
                   <Link
                     href={`/ventures/${v.slug}`}
-                    className="font-medium text-[var(--section-fg)] hover:text-[var(--color-brand-600)] transition-colors"
+                    className="font-medium text-[var(--section-fg)] hover:text-[var(--color-gold-500)] transition-colors"
                   >
                     {t("visit")}
                   </Link>
@@ -91,7 +91,7 @@ export function Ventures({
                       rel="noopener noreferrer"
                       aria-label={`Open ${name} website`}
                       title={`Open ${name} website`}
-                      className="inline-flex items-center gap-1 font-medium text-[var(--color-brand-600)] hover:gap-1.5 transition-all"
+                      className="inline-flex items-center gap-1 font-medium text-[var(--color-gold-500)] hover:gap-1.5 transition-all"
                     >
                       <ExternalLink className="h-3 w-3" />
                     </a>

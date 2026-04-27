@@ -41,14 +41,14 @@ export default function ClientFilesPage() {
               rel="noopener noreferrer"
               className="glass rounded-xl p-4 flex items-center gap-3 hover:border-white/15 group transition-colors"
             >
-              <FileText className="h-5 w-5 text-[var(--color-brand-400)] shrink-0" />
+              <FileText className="h-5 w-5 text-[var(--color-gold-300)] shrink-0" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-medium truncate">{f.name}</p>
                 <p className="text-xs text-[var(--fg-muted)] font-mono">
                   {formatDate(f.createdAt)} {f.size ? `· ${Math.round(f.size / 1024)} KB` : ""}
                 </p>
               </div>
-              <Download className="h-4 w-4 text-[var(--fg-muted)] group-hover:text-[var(--color-brand-400)]" />
+              <Download className="h-4 w-4 text-[var(--fg-muted)] group-hover:text-[var(--color-gold-300)]" />
             </a>
           ))}
         </div>

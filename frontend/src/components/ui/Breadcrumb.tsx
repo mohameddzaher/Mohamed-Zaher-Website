@@ -19,7 +19,7 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
         {all.map((c, i) => (
           <li key={i} className="flex items-center gap-1">
             {c.href && i < all.length - 1 ? (
-              <Link href={c.href} className="hover:text-[var(--color-brand-500)] transition-colors duration-150">
+              <Link href={c.href} className="hover:text-[var(--color-gold-400)] transition-colors duration-150">
                 {c.label}
               </Link>
             ) : (

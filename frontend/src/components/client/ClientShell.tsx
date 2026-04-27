@@ -40,7 +40,7 @@ export function ClientShell({ children }: { children: ReactNode }) {
     <div className="min-h-screen flex">
       <aside className="hidden md:flex w-64 shrink-0 flex-col bg-[var(--bg-elev)] border-r border-[var(--border)] p-5">
         <Link href="/client" className="flex items-center gap-3 mb-10">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-violet-500)] font-bold text-[#050507]">MZ</span>
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-gold-300)] to-[var(--color-violet-500)] font-bold text-[#050507]">MZ</span>
           <div>
             <p className="font-display font-semibold leading-tight">Client Portal</p>
             <p className="text-xs text-[var(--fg-muted)] font-mono">Welcome, {user.name.split(" ")[0]}</p>
@@ -56,7 +56,7 @@ export function ClientShell({ children }: { children: ReactNode }) {
                 className={cn(
                   "flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors",
                   active
-                    ? "bg-[var(--color-brand-400)]/15 text-[var(--fg)] border border-[var(--color-brand-400)]/20"
+                    ? "bg-[var(--color-gold-300)]/15 text-[var(--fg)] border border-[var(--color-gold-300)]/20"
                     : "text-[var(--fg-muted)] hover:bg-white/[0.03] hover:text-[var(--fg)]",
                 )}
               >

@@ -74,7 +74,7 @@ export default function AdminReviewsPage() {
             onClick={() => setTab(s)}
             className={`px-3 py-2 text-xs font-medium uppercase tracking-widest transition-colors ${
               tab === s
-                ? "text-[var(--color-brand-500)] border-b-2 border-[var(--color-brand-500)]"
+                ? "text-[var(--color-gold-400)] border-b-2 border-[var(--color-gold-400)]"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
             }`}
           >
@@ -115,7 +115,7 @@ export default function AdminReviewsPage() {
                 </div>
                 <div className="flex items-center gap-1">
                   {[...Array(r.rating)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-[var(--color-brand-500)] text-[var(--color-brand-500)]" />
+                    <Star key={i} className="h-3.5 w-3.5 fill-[var(--color-gold-400)] text-[var(--color-gold-400)]" />
                   ))}
                 </div>
               </div>
@@ -144,9 +144,9 @@ export default function AdminReviewsPage() {
                 <button
                   type="button"
                   onClick={() => patch(r._id, { featured: !r.featured })}
-                  className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-brand-500)]/40"
+                  className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-gold-400)]/40"
                 >
-                  <Star className={`h-3 w-3 ${r.featured ? "fill-[var(--color-brand-500)] text-[var(--color-brand-500)]" : ""}`} />
+                  <Star className={`h-3 w-3 ${r.featured ? "fill-[var(--color-gold-400)] text-[var(--color-gold-400)]" : ""}`} />
                   {r.featured ? "Unfeature" : "Feature"}
                 </button>
                 <button

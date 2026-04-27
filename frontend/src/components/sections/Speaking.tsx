@@ -30,10 +30,10 @@ export function Speaking({ tone = "light" }: { tone?: "dark" | "light" }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15, margin: "-60px" }}
               transition={{ duration: 0.28, delay: i * 0.03, ease: [0.16, 1, 0.3, 1] }}
-              className="panel rounded-xl p-5 hover:border-[var(--color-brand-500)]/30 transition-colors duration-200"
+              className="panel rounded-xl p-5 hover:border-[var(--color-gold-400)]/30 transition-colors duration-200"
             >
               <div className="flex items-start gap-3 mb-3">
-                <div className="h-9 w-9 rounded-lg bg-[var(--color-brand-500)] text-white flex items-center justify-center shrink-0">
+                <div className="h-9 w-9 rounded-lg bg-[var(--color-gold-400)] text-white flex items-center justify-center shrink-0">
                   <Mic className="h-4 w-4" />
                 </div>
                 <div className="flex-1">

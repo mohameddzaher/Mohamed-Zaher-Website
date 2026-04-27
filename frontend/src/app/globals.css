@@ -2,52 +2,68 @@
 
 /* ---------------------------------------------------------------
    Design Tokens — Mohamed Zaher Platform
-   Palette: Rose/Crimson primary (#E11D48) + bright accent (#FB7185)
-   Alternating dark/light sections. Corporate-snap feel.
+   Luxury editorial: deep ink + champagne/gold accents,
+   serif display for elegance, generous whitespace.
+   Hero kept on rose accent; rest of the site shifts to gold.
 --------------------------------------------------------------- */
 @theme {
-  /* Brand — rose/crimson (distinct from ETS red #eb1f28) */
+  /* Brand — kept rose for hero/CTAs, but de-emphasized elsewhere */
   --color-brand-50:  #fff1f2;
   --color-brand-100: #ffe4e6;
   --color-brand-200: #fecdd3;
   --color-brand-300: #fda4af;
-  --color-brand-400: #fb7185;  /* bright accent */
-  --color-brand-500: #f43f5e;  /* rose-500 */
-  --color-brand-600: #e11d48;  /* primary */
+  --color-brand-400: #fb7185;
+  --color-brand-500: #f43f5e;
+  --color-brand-600: #e11d48;
   --color-brand-700: #be123c;
   --color-brand-800: #9f1239;
   --color-brand-900: #881337;
 
-  /* Surfaces — charcoal for dark sections */
-  --color-ink-950: #050506;
-  --color-ink-900: #0a0a0b;
-  --color-ink-800: #111113;
-  --color-ink-700: #1a1a1d;
-  --color-ink-600: #23232a;
-  --color-ink-500: #2d2d35;
-  --color-ink-400: #4a4a55;
-  --color-ink-300: #7a7a85;
-  --color-ink-200: #b8b8c0;
-  --color-ink-100: #e5e5ea;
+  /* Gold / Champagne — luxury accent (used across non-hero) */
+  --color-gold-50:  #fbf6e9;
+  --color-gold-100: #f3e6c0;
+  --color-gold-200: #e9d49a;
+  --color-gold-300: #d8b878;
+  --color-gold-400: #c9a86b;   /* primary luxury accent */
+  --color-gold-500: #b18a4a;
+  --color-gold-600: #8d6d39;
+  --color-gold-700: #6b522a;
+  --color-gold-800: #4a381c;
+  --color-gold-900: #2d2110;
 
-  /* Cream/off-white for light sections */
-  --color-cream-50:  #fdfdfb;
-  --color-cream-100: #faf9f5;
-  --color-cream-200: #f3f1ea;
-  --color-cream-300: #e6e3d8;
+  /* Surfaces — warm-ink charcoal */
+  --color-ink-950: #060606;
+  --color-ink-900: #0b0b0d;
+  --color-ink-850: #0f0f12;
+  --color-ink-800: #15151a;
+  --color-ink-700: #1c1c22;
+  --color-ink-600: #26262d;
+  --color-ink-500: #353540;
+  --color-ink-400: #54545f;
+  --color-ink-300: #82828c;
+  --color-ink-200: #c0c0c8;
+  --color-ink-100: #ececef;
+  --color-ink-50:  #f7f7f8;
+
+  /* Cream / off-white for light sections */
+  --color-cream-50:  #fbf9f4;
+  --color-cream-100: #f5f1e7;
+  --color-cream-200: #ece6d5;
+  --color-cream-300: #ddd3bb;
 
   /* Semantic */
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-info:    #fb7185;
+  --color-success: #34a36f;
+  --color-warning: #c9a86b;
+  --color-info:    #c9a86b;
 
   /* Fonts */
   --font-display: var(--font-bricolage), "Space Grotesk", system-ui, sans-serif;
+  --font-serif:   var(--font-cormorant), "Cormorant Garamond", "EB Garamond", "Times New Roman", serif;
   --font-body:    var(--font-inter), "Inter", system-ui, sans-serif;
   --font-arabic:  var(--font-arabic), "IBM Plex Sans Arabic", "Tajawal", sans-serif;
   --font-mono:    var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
 
-  /* Easing — corporate snap */
+  /* Easing */
   --ease-snap:   cubic-bezier(0.16, 1, 0.3, 1);
   --ease-luxury: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -59,28 +75,36 @@
   --bg-elev-2:      var(--color-ink-700);
   --fg:             var(--color-ink-100);
   --fg-muted:       var(--color-ink-300);
-  --border:         rgba(255, 255, 255, 0.08);
-  --border-strong:  rgba(255, 255, 255, 0.14);
+  --border:         rgba(201, 168, 107, 0.10);
+  --border-strong:  rgba(201, 168, 107, 0.18);
 
   /* Section tokens — flipped by .section-light */
   --section-bg:     var(--color-ink-900);
   --section-fg:     var(--color-ink-100);
   --section-muted:  var(--color-ink-300);
-  --section-border: rgba(255, 255, 255, 0.08);
-  --section-panel:  rgba(255, 255, 255, 0.03);
+  --section-border: rgba(201, 168, 107, 0.10);
+  --section-panel:  rgba(255, 255, 255, 0.018);
+  --section-accent: var(--color-gold-400);
 
+  /* Brand gradients (kept for hero) */
   --gradient-brand: linear-gradient(135deg, var(--color-brand-500) 0%, var(--color-brand-700) 100%);
   --gradient-text:  linear-gradient(135deg, #fda4af 0%, #e11d48 55%, #be123c 100%);
+  --gradient-gold:  linear-gradient(135deg, #e9d49a 0%, #c9a86b 50%, #8d6d39 100%);
+  --gradient-gold-text: linear-gradient(135deg, #f3e6c0 0%, #d8b878 50%, #b18a4a 100%);
+
   --shadow-glow:    0 0 32px -6px var(--color-brand-500);
+  --shadow-luxury:  0 30px 60px -30px rgba(201, 168, 107, 0.18),
+                    0 0 0 1px rgba(201, 168, 107, 0.06) inset;
 }
 
-/* Light section scope */
+/* Light section scope — cream paper */
 .section-light {
   --section-bg:     var(--color-cream-50);
   --section-fg:     var(--color-ink-900);
-  --section-muted:  #5a5a66;
-  --section-border: rgba(10, 10, 15, 0.09);
-  --section-panel:  rgba(10, 10, 15, 0.025);
+  --section-muted:  #6a6458;
+  --section-border: rgba(141, 109, 57, 0.16);
+  --section-panel:  rgba(141, 109, 57, 0.04);
+  --section-accent: var(--color-gold-600);
   background-color: var(--section-bg);
   color: var(--section-fg);
 }
@@ -89,8 +113,9 @@
   --section-bg:     var(--color-ink-900);
   --section-fg:     var(--color-ink-100);
   --section-muted:  var(--color-ink-300);
-  --section-border: rgba(255, 255, 255, 0.08);
-  --section-panel:  rgba(255, 255, 255, 0.03);
+  --section-border: rgba(201, 168, 107, 0.10);
+  --section-panel:  rgba(255, 255, 255, 0.018);
+  --section-accent: var(--color-gold-400);
   background-color: var(--section-bg);
   color: var(--section-fg);
 }
@@ -114,6 +139,7 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   font-family: var(--font-body);
+  font-feature-settings: "ss01", "cv11";
   overflow-x: hidden;
   min-height: 100vh;
 }
@@ -134,14 +160,16 @@ h1, h2, h3, h4 {
   letter-spacing: 0;
 }
 .font-mono { font-family: var(--font-mono); }
+.font-serif { font-family: var(--font-serif); }
+[dir="rtl"] .font-serif { font-family: var(--font-arabic); }
 
-::selection { background: var(--color-brand-500); color: #fff; }
+::selection { background: var(--color-gold-400); color: var(--color-ink-950); }
 
-/* Scrollbar */
+/* Scrollbar — quiet champagne */
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--color-brand-600), var(--color-brand-800));
+  background: linear-gradient(180deg, var(--color-gold-500), var(--color-gold-700));
   border-radius: 8px;
   border: 2px solid var(--bg);
 }
@@ -165,6 +193,14 @@ h1, h2, h3, h4 {
   -webkit-text-fill-color: transparent;
 }
 
+@utility text-gold {
+  background: var(--gradient-gold-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
 @utility glass {
   background: color-mix(in srgb, var(--section-panel) 80%, transparent);
   backdrop-filter: blur(16px) saturate(130%);
@@ -173,9 +209,9 @@ h1, h2, h3, h4 {
 }
 
 @utility glass-strong {
-  background: color-mix(in srgb, var(--bg-elev) 80%, transparent);
-  backdrop-filter: blur(22px) saturate(150%);
-  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  background: color-mix(in srgb, var(--bg-elev) 78%, transparent);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
   border: 1px solid var(--border-strong);
 }
 
@@ -184,8 +220,30 @@ h1, h2, h3, h4 {
   border: 1px solid var(--section-border);
 }
 
+@utility panel-luxe {
+  background: var(--section-panel);
+  border: 1px solid var(--section-border);
+  box-shadow: 0 1px 0 0 color-mix(in srgb, var(--section-accent) 14%, transparent) inset;
+}
+
+@utility hairline {
+  border: 1px solid var(--section-border);
+}
+
 @utility glow {
   box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-luxe {
+  box-shadow: var(--shadow-luxury);
+}
+
+/* Hairline ornaments */
+@utility rule-luxe {
+  display: inline-block;
+  height: 1px;
+  width: 2.25rem;
+  background: linear-gradient(90deg, transparent, var(--section-accent), transparent);
 }
 
 /* ---------- Reduced motion ---------- */
@@ -200,7 +258,7 @@ h1, h2, h3, h4 {
   }
 }
 
-/* ---------- Animations (corporate speed) ---------- */
+/* ---------- Animations ---------- */
 @keyframes pulse-soft {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
@@ -220,6 +278,10 @@ h1, h2, h3, h4 {
 @keyframes blink {
   0%, 50% { opacity: 1; }
   51%, 100% { opacity: 0; }
+}
+@keyframes shimmer-gold {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 .animate-pulse-soft { animation: pulse-soft 1.8s ease-in-out infinite; }

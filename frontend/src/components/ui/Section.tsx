@@ -31,7 +31,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "relative py-16 md:py-20",
+        "relative py-24 md:py-32",
         tone === "light" ? "section-light" : "section-dark",
         className,
       )}
@@ -40,28 +40,34 @@ export function Section({
       <div className={cn("container-x", containerClassName)}>
         {(eyebrow || title || description) && (
           <motion.header
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15, margin: "-60px" }}
-            transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
-              "mb-10 max-w-3xl",
+              "mb-14 md:mb-16 max-w-3xl",
               align === "center" && "mx-auto text-center",
             )}
           >
             {eyebrow && (
-              <div className="inline-flex items-center gap-2 mb-3 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-600)] bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-600)] animate-pulse-soft" />
+              <div
+                className={cn(
+                  "mb-5 inline-flex items-center gap-3 text-[10px] font-light uppercase tracking-[0.32em] text-[var(--section-accent)]",
+                  align === "center" ? "justify-center" : "",
+                )}
+              >
+                <span aria-hidden className="rule-luxe" />
                 {eyebrow}
+                <span aria-hidden className="rule-luxe" />
               </div>
             )}
             {title && (
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] text-[var(--section-fg)]">
+              <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light tracking-[-0.01em] leading-[1.05] text-[var(--section-fg)]">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="mt-4 text-base md:text-lg text-[var(--section-muted)] leading-relaxed">
+              <p className="mt-6 text-base md:text-lg text-[var(--section-muted)] leading-relaxed font-light">
                 {description}
               </p>
             )}

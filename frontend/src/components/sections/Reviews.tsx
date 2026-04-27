@@ -68,7 +68,7 @@ export function Reviews({ tone = "light" }: { tone?: "dark" | "light" }) {
           <div className="relative panel rounded-2xl p-8 md:p-10 overflow-hidden">
             <Quote
               aria-hidden
-              className="absolute top-4 left-4 h-12 w-12 text-[var(--color-brand-500)]/10"
+              className="absolute top-4 left-4 h-12 w-12 text-[var(--color-gold-400)]/10"
             />
             <AnimatePresence mode="wait">
               <motion.div
@@ -81,14 +81,14 @@ export function Reviews({ tone = "light" }: { tone?: "dark" | "light" }) {
               >
                 <div className="flex items-center gap-0.5 mb-3">
                   {[...Array(cur.rating)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-[var(--color-brand-500)] text-[var(--color-brand-500)]" />
+                    <Star key={i} className="h-3.5 w-3.5 fill-[var(--color-gold-400)] text-[var(--color-gold-400)]" />
                   ))}
                 </div>
                 <p className="font-display text-lg md:text-xl leading-relaxed text-[var(--section-fg)]">
                   &ldquo;{cur.quote}&rdquo;
                 </p>
                 <footer className="mt-6 flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] flex items-center justify-center font-display font-bold text-white text-sm">
+                  <div className="h-10 w-10 rounded-full bg-gradient-to-br from-[var(--color-gold-400)] to-[var(--color-gold-600)] flex items-center justify-center font-display font-bold text-white text-sm">
                     {cur.name.split(" ").map((s) => s[0]).slice(0, 2).join("")}
                   </div>
                   <div>
@@ -110,7 +110,7 @@ export function Reviews({ tone = "light" }: { tone?: "dark" | "light" }) {
               type="button"
               onClick={() => setActiveIdx((i) => (i - 1 + all.length) % all.length)}
               aria-label="Previous"
-              className="h-8 w-8 inline-flex items-center justify-center rounded-full panel hover:border-[var(--color-brand-500)]/40 transition-colors duration-150"
+              className="h-8 w-8 inline-flex items-center justify-center rounded-full panel hover:border-[var(--color-gold-400)]/40 transition-colors duration-150"
             >
               <ChevronLeft className="h-3.5 w-3.5" />
             </button>
@@ -122,7 +122,7 @@ export function Reviews({ tone = "light" }: { tone?: "dark" | "light" }) {
                   onClick={() => setActiveIdx(idx)}
                   aria-label={`Review ${idx + 1}`}
                   className={`h-1 rounded-full transition-all duration-200 ${
-                    idx === activeIdx ? "w-6 bg-[var(--color-brand-600)]" : "w-1 bg-[var(--section-border)]"
+                    idx === activeIdx ? "w-6 bg-[var(--color-gold-500)]" : "w-1 bg-[var(--section-border)]"
                   }`}
                 />
               ))}
@@ -131,7 +131,7 @@ export function Reviews({ tone = "light" }: { tone?: "dark" | "light" }) {
               type="button"
               onClick={() => setActiveIdx((i) => (i + 1) % all.length)}
               aria-label="Next"
-              className="h-8 w-8 inline-flex items-center justify-center rounded-full panel hover:border-[var(--color-brand-500)]/40 transition-colors duration-150"
+              className="h-8 w-8 inline-flex items-center justify-center rounded-full panel hover:border-[var(--color-gold-400)]/40 transition-colors duration-150"
             >
               <ChevronRight className="h-3.5 w-3.5" />
             </button>
@@ -274,7 +274,7 @@ function ReviewModal({
                   <Star
                     className={`h-5 w-5 transition-colors ${
                       n <= form.rating
-                        ? "fill-[var(--color-brand-500)] text-[var(--color-brand-500)]"
+                        ? "fill-[var(--color-gold-400)] text-[var(--color-gold-400)]"
                         : "text-white/20"
                     }`}
                   />

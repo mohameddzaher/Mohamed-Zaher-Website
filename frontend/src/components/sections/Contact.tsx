@@ -181,7 +181,7 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "light" }) {
         <div className="lg:col-span-5 space-y-3">
           {/* Portrait card */}
           <div className="panel rounded-2xl p-5 flex items-center gap-4">
-            <div className="relative h-16 w-16 rounded-full overflow-hidden ring-1 ring-[var(--color-brand-500)]/40 shrink-0">
+            <div className="relative h-16 w-16 rounded-full overflow-hidden ring-1 ring-[var(--color-gold-400)]/40 shrink-0">
               <Image
                 src={SITE.profileImage}
                 alt="Mohamed Zaher"
@@ -192,7 +192,7 @@ export function Contact({ tone = "dark" }: { tone?: "dark" | "light" }) {
             </div>
             <div>
               <p className="font-display text-base font-semibold">{t("info.portrait_role") === "Entrepreneur · CTO" ? "Mohamed Zaher" : "محمد زاهر"}</p>
-              <p className="text-xs text-[var(--color-brand-600)] font-mono">{t("info.portrait_role")}</p>
+              <p className="text-xs text-[var(--color-gold-500)] font-mono">{t("info.portrait_role")}</p>
               <p className="text-[11px] text-[var(--section-muted)] mt-1">
                 {t("info.portrait_line")}
               </p>
@@ -252,8 +252,8 @@ function ContactItem({
 }) {
   const inner = (
     <div className="flex items-start gap-3">
-      <div className="h-8 w-8 rounded-lg bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30 flex items-center justify-center shrink-0">
-        <Icon className="h-3.5 w-3.5 text-[var(--color-brand-600)]" />
+      <div className="h-8 w-8 rounded-lg bg-[var(--color-gold-400)]/10 border border-[var(--color-gold-400)]/30 flex items-center justify-center shrink-0">
+        <Icon className="h-3.5 w-3.5 text-[var(--color-gold-500)]" />
       </div>
       <div>
         <p className="text-[10px] uppercase tracking-widest font-mono text-[var(--section-muted)]">{label}</p>
@@ -284,7 +284,7 @@ function SocialBtn({
       rel="noopener noreferrer"
       aria-label={label}
       title={label}
-      className="h-7 w-7 inline-flex items-center justify-center rounded-md text-[var(--section-muted)] hover:text-[var(--color-brand-600)] hover:bg-[color-mix(in_srgb,var(--color-brand-500)_10%,transparent)] transition-colors duration-150"
+      className="h-7 w-7 inline-flex items-center justify-center rounded-md text-[var(--section-muted)] hover:text-[var(--color-gold-500)] hover:bg-[color-mix(in_srgb,var(--color-gold-400)_10%,transparent)] transition-colors duration-150"
     >
       <Icon className="h-3.5 w-3.5" />
     </a>

@@ -73,7 +73,7 @@ export function Projects({
                 className={cn(
                   "px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-150",
                   filter === f
-                    ? "bg-[var(--color-brand-600)] text-white shadow-[0_4px_14px_-4px_var(--color-brand-600)]"
+                    ? "bg-[var(--color-gold-500)] text-white shadow-[0_4px_14px_-4px_var(--color-gold-500)]"
                     : "panel text-[var(--section-muted)] hover:text-[var(--section-fg)]",
                 )}
               >
@@ -146,7 +146,7 @@ function ProjectCard({
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.97 }}
       transition={{ duration: 0.25, delay: index * 0.02, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative panel rounded-xl overflow-hidden hover:border-[var(--color-brand-500)]/30 transition-colors duration-200"
+      className="group relative panel rounded-xl overflow-hidden hover:border-[var(--color-gold-400)]/30 transition-colors duration-200"
     >
       <Link href={`/projects/${project.slug}`} className="block">
         <div className="relative aspect-[16/10] overflow-hidden bg-[var(--section-panel)]">
@@ -175,7 +175,7 @@ function ProjectCard({
 
       <div className="p-4">
         <Link href={`/projects/${project.slug}`}>
-          <h3 className="font-display text-base font-semibold mb-1 hover:text-[var(--color-brand-600)] transition-colors">
+          <h3 className="font-display text-base font-semibold mb-1 hover:text-[var(--color-gold-500)] transition-colors">
             {title}
           </h3>
         </Link>
@@ -193,7 +193,7 @@ function ProjectCard({
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--section-muted)] hover:text-[var(--color-brand-600)] transition-colors"
+              className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--section-muted)] hover:text-[var(--color-gold-500)] transition-colors"
             >
               <Github className="h-3 w-3" />
               {t("source")}
@@ -204,7 +204,7 @@ function ProjectCard({
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--section-muted)] hover:text-[var(--color-brand-600)] transition-colors"
+              className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--section-muted)] hover:text-[var(--color-gold-500)] transition-colors"
             >
               <ExternalLink className="h-3 w-3" />
               {t("live_demo")}
@@ -212,7 +212,7 @@ function ProjectCard({
           )}
           <Link
             href={`/projects/${project.slug}`}
-            className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--color-brand-600)] hover:gap-1.5 transition-all ms-auto"
+            className="inline-flex items-center gap-1 text-[10px] font-medium text-[var(--color-gold-500)] hover:gap-1.5 transition-all ms-auto"
           >
             {t("case_study")}
             <ArrowRight className="h-3 w-3" />

@@ -44,8 +44,8 @@ export default function AdminMediaPage() {
 
       <label className="block">
         <input type="file" className="hidden" onChange={onChange} disabled={uploading} />
-        <Card className="p-10 text-center border-2 border-dashed cursor-pointer hover:border-[var(--color-brand-400)]/40 transition-colors">
-          <Upload className="h-10 w-10 mx-auto mb-3 text-[var(--color-brand-400)]" />
+        <Card className="p-10 text-center border-2 border-dashed cursor-pointer hover:border-[var(--color-gold-300)]/40 transition-colors">
+          <Upload className="h-10 w-10 mx-auto mb-3 text-[var(--color-gold-300)]" />
           <p className="font-medium">{uploading ? "Uploading…" : "Click to upload"}</p>
           <p className="text-xs text-[var(--fg-muted)] mt-1">Images, PDF, video. Max 25 MB.</p>
         </Card>

@@ -58,7 +58,7 @@ export default function ClientProjectsPage() {
                   <span className="font-mono">{p.progress}%</span>
                 </div>
                 <div className="h-2 rounded-full bg-white/[0.04] overflow-hidden">
-                  <div style={{ width: `${p.progress}%` }} className="h-full bg-gradient-to-r from-[var(--color-brand-400)] to-[var(--color-violet-500)]" />
+                  <div style={{ width: `${p.progress}%` }} className="h-full bg-gradient-to-r from-[var(--color-gold-300)] to-[var(--color-violet-500)]" />
                 </div>
               </div>
               {p.milestones && p.milestones.length > 0 && (

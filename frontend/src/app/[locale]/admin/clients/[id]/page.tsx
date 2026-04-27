@@ -54,7 +54,7 @@ export default function ClientDetailPage({ params }: { params: Promise<{ id: str
     <div className="space-y-8">
       <header className="flex items-start justify-between gap-6 flex-wrap">
         <div className="flex items-center gap-4">
-          <span className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[var(--color-brand-400)] to-[var(--color-violet-500)] flex items-center justify-center font-bold text-[#050507]">
+          <span className="h-14 w-14 rounded-2xl bg-gradient-to-br from-[var(--color-gold-300)] to-[var(--color-violet-500)] flex items-center justify-center font-bold text-[#050507]">
             {client.name.split(" ").map((s) => s[0]).slice(0, 2).join("")}
           </span>
           <div>
@@ -93,14 +93,14 @@ export default function ClientDetailPage({ params }: { params: Promise<{ id: str
             onClick={() => setTab(tid as typeof tab)}
             className={`relative inline-flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors ${
               tab === tid
-                ? "text-[var(--color-brand-400)]"
+                ? "text-[var(--color-gold-300)]"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]"
             }`}
           >
             <Icon className="h-4 w-4" />
             {label}
             {tab === tid && (
-              <span className="absolute bottom-0 inset-x-0 h-0.5 bg-[var(--color-brand-400)]" />
+              <span className="absolute bottom-0 inset-x-0 h-0.5 bg-[var(--color-gold-300)]" />
             )}
           </button>
         ))}
@@ -131,7 +131,7 @@ export default function ClientDetailPage({ params }: { params: Promise<{ id: str
                     <div className="h-1.5 rounded-full bg-white/[0.04] overflow-hidden">
                       <div
                         style={{ width: `${p.progress}%` }}
-                        className="h-full bg-gradient-to-r from-[var(--color-brand-400)] to-[var(--color-violet-500)]"
+                        className="h-full bg-gradient-to-r from-[var(--color-gold-300)] to-[var(--color-violet-500)]"
                       />
                     </div>
                   </div>
@@ -193,7 +193,7 @@ export default function ClientDetailPage({ params }: { params: Promise<{ id: str
             <div className="grid sm:grid-cols-2 gap-3">
               {files.map((f) => (
                 <a key={f._id} href={f.url} target="_blank" rel="noopener noreferrer" className="glass rounded-xl p-4 flex items-center gap-3 hover:border-white/15 transition-colors">
-                  <FileText className="h-5 w-5 text-[var(--color-brand-400)]" />
+                  <FileText className="h-5 w-5 text-[var(--color-gold-300)]" />
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium truncate">{f.name}</p>
                     <p className="text-xs text-[var(--fg-muted)] font-mono">
@@ -374,7 +374,7 @@ function FileUpload({ clientId, onUploaded }: { clientId: string; onUploaded: ()
     }
   }
   return (
-    <label className="block glass rounded-xl p-4 border-2 border-dashed border-[var(--border-strong)] cursor-pointer hover:border-[var(--color-brand-400)]/50 transition-colors">
+    <label className="block glass rounded-xl p-4 border-2 border-dashed border-[var(--border-strong)] cursor-pointer hover:border-[var(--color-gold-300)]/50 transition-colors">
       <input type="file" className="hidden" onChange={onChange} disabled={uploading} />
       <div className="text-center text-sm text-[var(--fg-muted)]">
         {uploading ? "Uploading…" : "Click to upload a file for this client"}

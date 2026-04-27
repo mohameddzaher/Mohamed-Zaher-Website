@@ -151,7 +151,7 @@ export default function AdminCalendarPage() {
               d.setUTCDate(day.getUTCDate() - 1);
               setDay(d);
             }}
-            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-brand-500)]/40"
+            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-gold-400)]/40"
           >
             <ChevronLeft className="h-3.5 w-3.5" />
           </button>
@@ -160,7 +160,7 @@ export default function AdminCalendarPage() {
             onClick={() => setDay(startOfDayUTC(new Date()))}
             className={cn(
               "px-3 py-1.5 rounded-md text-xs font-medium",
-              isToday ? "bg-[var(--color-brand-600)] text-white" : "panel hover:border-[var(--color-brand-500)]/40",
+              isToday ? "bg-[var(--color-gold-500)] text-white" : "panel hover:border-[var(--color-gold-400)]/40",
             )}
           >
             Today
@@ -173,13 +173,13 @@ export default function AdminCalendarPage() {
               d.setUTCDate(day.getUTCDate() + 1);
               setDay(d);
             }}
-            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-brand-500)]/40"
+            className="h-8 w-8 inline-flex items-center justify-center rounded-md panel hover:border-[var(--color-gold-400)]/40"
           >
             <ChevronRight className="h-3.5 w-3.5" />
           </button>
         </div>
         <p className="font-display text-base font-semibold inline-flex items-center gap-2">
-          <CalendarIcon className="h-4 w-4 text-[var(--color-brand-500)]" />
+          <CalendarIcon className="h-4 w-4 text-[var(--color-gold-400)]" />
           {fmtDayLabel(day)}
         </p>
         <input
@@ -214,7 +214,7 @@ export default function AdminCalendarPage() {
                   {b && (
                     <Link
                       href={`/admin/bookings/${b._id}`}
-                      className="block p-3 rounded-lg bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30 hover:bg-[var(--color-brand-500)]/15 transition"
+                      className="block p-3 rounded-lg bg-[var(--color-gold-400)]/10 border border-[var(--color-gold-400)]/30 hover:bg-[var(--color-gold-400)]/15 transition"
                     >
                       <div className="flex items-start justify-between gap-2 flex-wrap">
                         <div>
@@ -257,7 +257,7 @@ export default function AdminCalendarPage() {
                             ? "bg-red-500/10 border-red-500/30 hover:bg-red-500/15"
                             : tk.priority === "high"
                               ? "bg-amber-500/10 border-amber-500/30 hover:bg-amber-500/15"
-                              : "panel hover:border-[var(--color-brand-500)]/40",
+                              : "panel hover:border-[var(--color-gold-400)]/40",
                         )}
                       >
                         <div className="flex items-center justify-between gap-2">

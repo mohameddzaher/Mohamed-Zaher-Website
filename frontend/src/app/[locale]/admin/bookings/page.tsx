@@ -124,7 +124,7 @@ export default function AdminBookingsPage() {
             className={cn(
               "px-3 py-2 text-xs font-medium uppercase tracking-widest transition-colors whitespace-nowrap",
               tab === s
-                ? "text-[var(--color-brand-500)] border-b-2 border-[var(--color-brand-500)]"
+                ? "text-[var(--color-gold-400)] border-b-2 border-[var(--color-gold-400)]"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]",
             )}
           >
@@ -168,11 +168,11 @@ export default function AdminBookingsPage() {
                       </Badge>
                     </div>
                     <div className="text-xs text-[var(--fg-muted)] font-mono mt-1 flex items-center gap-3 flex-wrap">
-                      <a href={`mailto:${b.email}`} className="inline-flex items-center gap-1 hover:text-[var(--color-brand-400)]">
+                      <a href={`mailto:${b.email}`} className="inline-flex items-center gap-1 hover:text-[var(--color-gold-300)]">
                         <Mail className="h-3 w-3" /> {b.email}
                       </a>
                       {b.phone && (
-                        <a href={`tel:${b.phone}`} className="inline-flex items-center gap-1 hover:text-[var(--color-brand-400)]">
+                        <a href={`tel:${b.phone}`} className="inline-flex items-center gap-1 hover:text-[var(--color-gold-300)]">
                           <Phone className="h-3 w-3" /> {b.phone}
                         </a>
                       )}
@@ -186,7 +186,7 @@ export default function AdminBookingsPage() {
                   </div>
                   <div className="text-end">
                     <p className="font-mono text-sm">
-                      <CalendarIcon className="inline h-3.5 w-3.5 mr-1 text-[var(--color-brand-500)]" />
+                      <CalendarIcon className="inline h-3.5 w-3.5 mr-1 text-[var(--color-gold-400)]" />
                       {fmtDateTime(b.startsAt)}
                     </p>
                     <p className="text-xs text-[var(--fg-muted)] mt-0.5">
@@ -221,7 +221,7 @@ export default function AdminBookingsPage() {
                       <button
                         type="button"
                         onClick={() => patch(b._id, { status: "completed" })}
-                        className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-brand-500)]/40"
+                        className="inline-flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-md panel hover:border-[var(--color-gold-400)]/40"
                       >
                         <CheckCircle2 className="h-3 w-3" /> Mark done
                       </button>

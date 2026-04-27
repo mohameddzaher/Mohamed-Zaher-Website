@@ -95,12 +95,13 @@ export function Header() {
             scrolled ? "glass-strong" : "bg-transparent",
           )}
         >
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] font-display font-bold text-white text-sm shadow-[0_4px_14px_-4px_var(--color-brand-600)]">
-              MZ
-            </span>
-            <span className="hidden sm:inline font-display text-sm font-semibold tracking-tight">
-              Mohamed<span className="text-[var(--color-brand-500)]">.</span>
+          <Link
+            href="/"
+            className="group inline-flex items-baseline gap-2 select-none"
+            aria-label="Home"
+          >
+            <span className="font-serif italic font-light text-lg sm:text-xl leading-none tracking-[0.01em] text-[var(--fg)] group-hover:text-[var(--color-gold-300)] transition-colors duration-300">
+              mohamed zaher
             </span>
           </Link>
 
@@ -112,18 +113,18 @@ export function Header() {
                   key={l.key}
                   href={l.href}
                   className={cn(
-                    "relative px-3 py-1.5 text-xs font-medium rounded-md transition-all duration-150",
+                    "relative px-3 py-1.5 text-[11px] font-normal uppercase tracking-[0.18em] rounded-md transition-all duration-200",
                     active
-                      ? "text-[var(--color-brand-500)] font-semibold"
-                      : "text-[var(--fg-muted)] hover:text-[var(--fg)] hover:bg-white/[0.04]",
+                      ? "text-[var(--color-gold-300)]"
+                      : "text-[var(--fg-muted)] hover:text-[var(--fg)]",
                   )}
                 >
                   {t(l.key)}
                   {active && (
                     <motion.span
                       layoutId="nav-indicator"
-                      className="absolute inset-x-2 -bottom-0.5 h-0.5 rounded-full bg-[var(--color-brand-500)]"
-                      transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
+                      className="absolute inset-x-3 -bottom-0.5 h-px bg-[var(--color-gold-400)]"
+                      transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                     />
                   )}
                 </Link>
@@ -147,12 +148,12 @@ export function Header() {
                 <button
                   type="button"
                   onClick={() => setUserOpen((o) => !o)}
-                  className="hidden md:inline-flex items-center gap-2 ps-1 pe-2 py-1 rounded-full panel hover:border-[var(--color-brand-500)]/40 transition-colors duration-150"
+                  className="hidden md:inline-flex items-center gap-2 ps-1 pe-2 py-1 rounded-full panel hover:border-[var(--color-gold-400)]/40 transition-colors duration-150"
                   aria-label="User menu"
                   aria-haspopup="menu"
                   aria-expanded={userOpen ? "true" : "false"}
                 >
-                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] text-white text-[10px] font-bold">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-gold-400)] to-[var(--color-gold-600)] text-white text-[10px] font-bold">
                     {initials}
                   </span>
                   <span className="text-xs font-medium max-w-[120px] truncate">{user.name.split(" ")[0]}</span>
@@ -171,7 +172,7 @@ export function Header() {
                       <div className="px-3 py-2 border-b border-white/5 mb-1">
                         <p className="text-xs font-semibold truncate">{user.name}</p>
                         <p className="text-[10px] font-mono text-[var(--fg-muted)] truncate">{user.email}</p>
-                        <span className="mt-1 inline-block text-[9px] uppercase tracking-widest text-[var(--color-brand-400)]">
+                        <span className="mt-1 inline-block text-[9px] uppercase tracking-widest text-[var(--color-gold-300)]">
                           {user.role}
                         </span>
                       </div>
@@ -253,12 +254,12 @@ export function Header() {
 
               {user && (
                 <div className="mb-4 px-3 py-3 rounded-lg panel flex items-center gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] text-white text-xs font-bold">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-gold-400)] to-[var(--color-gold-600)] text-white text-xs font-bold">
                     {initials}
                   </span>
                   <div className="min-w-0">
                     <p className="text-sm font-medium truncate">{user.name}</p>
-                    <p className="text-[10px] uppercase tracking-widest text-[var(--color-brand-400)]">{user.role}</p>
+                    <p className="text-[10px] uppercase tracking-widest text-[var(--color-gold-300)]">{user.role}</p>
                   </div>
                 </div>
               )}
@@ -273,7 +274,7 @@ export function Header() {
                       className={cn(
                         "px-3 py-2.5 text-sm font-medium rounded-md transition-colors duration-150",
                         active
-                          ? "bg-[var(--color-brand-500)]/15 text-[var(--color-brand-400)] border border-[var(--color-brand-500)]/30"
+                          ? "bg-[var(--color-gold-400)]/15 text-[var(--color-gold-300)] border border-[var(--color-gold-400)]/30"
                           : "text-[var(--fg)] hover:bg-white/[0.04]",
                       )}
                     >
@@ -347,7 +348,7 @@ function UserMenuItem({
       href={href}
       className="flex items-center gap-2 px-3 py-2 rounded-md text-xs text-[var(--fg)] hover:bg-white/[0.05] transition-colors"
     >
-      <Icon className="h-3.5 w-3.5 text-[var(--color-brand-400)]" />
+      <Icon className="h-3.5 w-3.5 text-[var(--color-gold-300)]" />
       {label}
     </Link>
   );

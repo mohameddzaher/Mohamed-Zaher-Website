@@ -67,7 +67,7 @@ export default function ClientDashboard() {
           <Card key={label} className="p-5">
             <div className="flex items-center justify-between mb-3">
               <p className="text-xs uppercase tracking-widest text-[var(--fg-muted)] font-mono">{label}</p>
-              <Icon className="h-4 w-4 text-[var(--color-brand-400)]" />
+              <Icon className="h-4 w-4 text-[var(--color-gold-300)]" />
             </div>
             <p className="font-display text-3xl font-bold">{isLoading ? "—" : value}</p>
           </Card>
@@ -88,7 +88,7 @@ export default function ClientDashboard() {
                     <Badge variant="brand">{p.status}</Badge>
                   </div>
                   <div className="h-1.5 rounded-full bg-white/[0.04] overflow-hidden">
-                    <div style={{ width: `${p.progress}%` }} className="h-full bg-gradient-to-r from-[var(--color-brand-400)] to-[var(--color-violet-500)]" />
+                    <div style={{ width: `${p.progress}%` }} className="h-full bg-gradient-to-r from-[var(--color-gold-300)] to-[var(--color-violet-500)]" />
                   </div>
                 </li>
               ))}
@@ -105,7 +105,7 @@ export default function ClientDashboard() {
               {data.files.slice(0, 6).map((f) => (
                 <li key={f._id}>
                   <a href={f.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/[0.03] transition-colors">
-                    <FileText className="h-4 w-4 text-[var(--color-brand-400)]" />
+                    <FileText className="h-4 w-4 text-[var(--color-gold-300)]" />
                     <div className="flex-1 min-w-0">
                       <p className="text-sm truncate">{f.name}</p>
                       <p className="text-xs text-[var(--fg-muted)] font-mono">{formatDate(f.createdAt)}</p>

@@ -109,7 +109,7 @@ export default function BookingDetailPage({ params }: { params: Promise<{ id: st
           <div>
             <p className="text-[10px] uppercase tracking-widest font-mono text-[var(--fg-muted)] mb-0.5">Type</p>
             <p className="inline-flex items-center gap-1">
-              <TypeIcon className="h-3.5 w-3.5 text-[var(--color-brand-500)]" />
+              <TypeIcon className="h-3.5 w-3.5 text-[var(--color-gold-400)]" />
               {data.meetingType}
             </p>
           </div>
@@ -130,18 +130,18 @@ export default function BookingDetailPage({ params }: { params: Promise<{ id: st
         <h2 className="font-display text-base font-semibold">Contact</h2>
         <ul className="space-y-2 text-sm">
           <li className="inline-flex items-center gap-2">
-            <Mail className="h-3.5 w-3.5 text-[var(--color-brand-500)]" />
-            <a href={`mailto:${data.email}`} className="hover:text-[var(--color-brand-400)]">{data.email}</a>
+            <Mail className="h-3.5 w-3.5 text-[var(--color-gold-400)]" />
+            <a href={`mailto:${data.email}`} className="hover:text-[var(--color-gold-300)]">{data.email}</a>
           </li>
           {data.phone && (
             <li className="inline-flex items-center gap-2">
-              <Phone className="h-3.5 w-3.5 text-[var(--color-brand-500)]" />
-              <a href={`tel:${data.phone}`} className="hover:text-[var(--color-brand-400)]">{data.phone}</a>
+              <Phone className="h-3.5 w-3.5 text-[var(--color-gold-400)]" />
+              <a href={`tel:${data.phone}`} className="hover:text-[var(--color-gold-300)]">{data.phone}</a>
             </li>
           )}
           {data.company && (
             <li className="inline-flex items-center gap-2">
-              <Building2 className="h-3.5 w-3.5 text-[var(--color-brand-500)]" />
+              <Building2 className="h-3.5 w-3.5 text-[var(--color-gold-400)]" />
               {data.company}
             </li>
           )}

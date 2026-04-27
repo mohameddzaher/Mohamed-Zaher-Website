@@ -172,7 +172,7 @@ export default function AdminTasksPage() {
           {summary.today.length > 0 && (
             <Card className="p-5">
               <h2 className="font-display text-base font-semibold mb-3 inline-flex items-center gap-2">
-                <CalendarIcon className="h-4 w-4 text-[var(--color-brand-500)]" /> Today
+                <CalendarIcon className="h-4 w-4 text-[var(--color-gold-400)]" /> Today
               </h2>
               <ul className="space-y-2">
                 {summary.today.slice(0, 5).map((tk) => (
@@ -202,7 +202,7 @@ export default function AdminTasksPage() {
             className={cn(
               "px-3 py-2 text-xs font-medium uppercase tracking-widest whitespace-nowrap transition-colors",
               tab === s
-                ? "text-[var(--color-brand-500)] border-b-2 border-[var(--color-brand-500)]"
+                ? "text-[var(--color-gold-400)] border-b-2 border-[var(--color-gold-400)]"
                 : "text-[var(--fg-muted)] hover:text-[var(--fg)]",
             )}
           >
@@ -270,7 +270,7 @@ function SummaryCard({
   tone: "brand" | "muted" | "danger";
 }) {
   const colors = {
-    brand: "text-[var(--color-brand-500)]",
+    brand: "text-[var(--color-gold-400)]",
     muted: "text-[var(--fg-muted)]",
     danger: "text-red-400",
   };
@@ -305,7 +305,7 @@ function TaskRow({
       : task.priority === "high"
         ? "bg-amber-500/15 text-amber-400 border-amber-500/30"
         : task.priority === "medium"
-          ? "bg-[var(--color-brand-500)]/15 text-[var(--color-brand-400)] border-[var(--color-brand-500)]/30"
+          ? "bg-[var(--color-gold-400)]/15 text-[var(--color-gold-300)] border-[var(--color-gold-400)]/30"
           : "bg-[var(--bg-elev)] text-[var(--fg-muted)] border-[var(--border)]";
 
   const dueDate = task.dueAt || task.startsAt;
@@ -318,7 +318,7 @@ function TaskRow({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2 }}
       className={cn(
-        "panel rounded-xl p-3 flex items-start gap-3 hover:border-[var(--color-brand-500)]/30 transition-colors",
+        "panel rounded-xl p-3 flex items-start gap-3 hover:border-[var(--color-gold-400)]/30 transition-colors",
         done && "opacity-50",
       )}
     >
@@ -384,7 +384,7 @@ function TaskRow({
           type="button"
           onClick={onEdit}
           aria-label="Edit"
-          className="p-1.5 rounded-md hover:bg-white/[0.06] text-[var(--fg-muted)] hover:text-[var(--color-brand-400)]"
+          className="p-1.5 rounded-md hover:bg-white/[0.06] text-[var(--fg-muted)] hover:text-[var(--color-gold-300)]"
         >
           <Pencil className="h-3 w-3" />
         </button>

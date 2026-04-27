@@ -6,7 +6,7 @@ export default function NotFound() {
     <html>
       <body>
         <div className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-          <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-brand-400)]">
+          <p className="font-mono text-xs uppercase tracking-widest text-[var(--color-gold-300)]">
             404 — not found
           </p>
           <h1 className="mt-4 font-display text-6xl md:text-8xl font-black">
@@ -17,7 +17,7 @@ export default function NotFound() {
           </p>
           <Link
             href="/"
-            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-[#050507] [background:linear-gradient(135deg,var(--color-brand-400),var(--color-violet-500))]"
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-[#050507] [background:linear-gradient(135deg,var(--color-gold-300),var(--color-violet-500))]"
           >
             Take me home
           </Link>

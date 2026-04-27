@@ -26,7 +26,7 @@ export function PageHeader({ eyebrow, title, description, crumbs, tone = "dark" 
           className="max-w-3xl"
         >
           {eyebrow && (
-            <div className="inline-flex items-center gap-2 mb-3 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-widest text-[var(--color-brand-500)] bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30">
+            <div className="inline-flex items-center gap-2 mb-3 px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-widest text-[var(--color-gold-400)] bg-[var(--color-gold-400)]/10 border border-[var(--color-gold-400)]/30">
               {eyebrow}
             </div>
           )}

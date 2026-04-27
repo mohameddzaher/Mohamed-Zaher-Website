@@ -36,10 +36,10 @@ export function Skills({ tone = "light" }: { tone?: "dark" | "light" }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15, margin: "-60px" }}
               transition={{ duration: 0.3, delay: ti * 0.04, ease: [0.16, 1, 0.3, 1] }}
-              className="panel rounded-xl p-5 hover:border-[var(--color-brand-500)]/30 transition-colors duration-200"
+              className="panel rounded-xl p-5 hover:border-[var(--color-gold-400)]/30 transition-colors duration-200"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-9 w-9 rounded-lg bg-[var(--color-brand-500)]/10 border border-[var(--color-brand-500)]/30 flex items-center justify-center text-[var(--color-brand-600)]">
+                <div className="h-9 w-9 rounded-lg bg-[var(--color-gold-400)]/10 border border-[var(--color-gold-400)]/30 flex items-center justify-center text-[var(--color-gold-500)]">
                   <Icon className="h-4 w-4" />
                 </div>
                 <h3 className="font-display text-base font-semibold">
@@ -62,7 +62,7 @@ export function Skills({ tone = "light" }: { tone?: "dark" | "light" }) {
                         whileInView={{ width: `${s.level}%` }}
                         viewport={{ once: true, amount: 0.15, margin: "-60px" }}
                         transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-                        className="h-full bg-gradient-to-r from-[var(--color-brand-500)] to-[var(--color-brand-700)]"
+                        className="h-full bg-gradient-to-r from-[var(--color-gold-400)] to-[var(--color-gold-600)]"
                       />
                     </div>
                   </div>

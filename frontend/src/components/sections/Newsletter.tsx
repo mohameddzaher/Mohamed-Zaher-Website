@@ -45,10 +45,10 @@ export function Newsletter({ tone = "light" }: { tone?: "dark" | "light" }) {
       >
         <div
           aria-hidden
-          className="absolute inset-0 opacity-20 bg-gradient-to-br from-[var(--color-brand-500)]/30 via-transparent to-[var(--color-brand-800)]/30"
+          className="absolute inset-0 opacity-20 bg-gradient-to-br from-[var(--color-gold-400)]/30 via-transparent to-[var(--color-gold-700)]/30"
         />
         <div className="relative z-10">
-          <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-brand-500)] to-[var(--color-brand-700)] mb-3">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-gold-400)] to-[var(--color-gold-600)] mb-3">
             <Mail className="h-4 w-4 text-white" />
           </div>
           <h2 className="font-display text-2xl md:text-3xl font-bold tracking-tight mb-2">

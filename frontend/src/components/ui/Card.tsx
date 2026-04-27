@@ -12,9 +12,9 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       className={cn(
-        "panel rounded-xl p-5",
+        "panel rounded-2xl p-6 md:p-7",
         interactive &&
-          "transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-0.5 hover:border-[var(--color-brand-500)]/30 hover:shadow-[0_8px_24px_-8px_var(--color-brand-600)]",
+          "transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-0.5 hover:border-[var(--color-gold-400)]/40 hover:shadow-[0_30px_60px_-30px_rgba(201,168,107,0.35),0_0_0_1px_rgba(201,168,107,0.10)_inset]",
         className,
       )}
       {...props}
@@ -28,17 +28,41 @@ export function CardHeader({ className, ...props }: HTMLAttributes<HTMLDivElemen
 }
 
 export function CardTitle({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) {
-  return <h3 className={cn("text-lg font-semibold tracking-tight", className)} {...props} />;
+  return (
+    <h3
+      className={cn(
+        "font-serif text-xl md:text-2xl font-light tracking-tight leading-tight",
+        className,
+      )}
+      {...props}
+    />
+  );
 }
 
 export function CardDescription({ className, ...props }: HTMLAttributes<HTMLParagraphElement>) {
-  return <p className={cn("text-sm text-[var(--section-muted)] leading-relaxed", className)} {...props} />;
+  return (
+    <p
+      className={cn(
+        "text-sm text-[var(--section-muted)] leading-relaxed",
+        className,
+      )}
+      {...props}
+    />
+  );
 }
 
 export function CardContent({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("space-y-2", className)} {...props} />;
+  return <div className={cn("space-y-3", className)} {...props} />;
 }
 
 export function CardFooter({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
-  return <div className={cn("mt-4 flex items-center justify-between gap-2", className)} {...props} />;
+  return (
+    <div
+      className={cn(
+        "mt-5 pt-4 border-t border-[var(--section-border)] flex items-center justify-between gap-2",
+        className,
+      )}
+      {...props}
+    />
+  );
 }

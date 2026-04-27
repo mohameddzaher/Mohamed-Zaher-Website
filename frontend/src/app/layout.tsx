@@ -3,6 +3,7 @@ import {
   Inter,
   Space_Grotesk,
   Bricolage_Grotesque,
+  Cormorant_Garamond,
   JetBrains_Mono,
   IBM_Plex_Sans_Arabic,
 } from "next/font/google";
@@ -27,6 +28,14 @@ const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
   display: "swap",
   weight: ["400", "500", "600", "700", "800"],
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -99,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       suppressHydrationWarning
-      className={`${inter.variable} ${spaceGrotesk.variable} ${bricolage.variable} ${jetbrains.variable} ${arabic.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${bricolage.variable} ${cormorant.variable} ${jetbrains.variable} ${arabic.variable}`}
     >
       <body>
         <JsonLd />
