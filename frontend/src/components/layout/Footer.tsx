@@ -93,10 +93,10 @@ export function Footer() {
         <div className="mb-10">
           <Link
             href="/"
-            className="font-serif italic font-light tracking-[0.005em] leading-[0.95] text-5xl md:text-6xl lg:text-7xl inline-block text-[var(--fg)] hover:text-[var(--color-gold-200)] transition-colors duration-500"
+            className="font-wordmark tracking-[0.06em] leading-[0.95] text-5xl md:text-6xl lg:text-7xl inline-block text-[var(--fg)] hover:text-[var(--color-gold-200)] transition-colors duration-500"
             aria-label="Home"
           >
-            mohamed zaher
+            Mohamed Zaher
           </Link>
 
           {/* Inline nav with hairline separators */}

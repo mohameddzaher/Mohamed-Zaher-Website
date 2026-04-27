@@ -97,11 +97,11 @@ export function Header() {
         >
           <Link
             href="/"
-            className="group inline-flex items-baseline gap-2 select-none"
+            className="group inline-flex items-baseline select-none"
             aria-label="Home"
           >
-            <span className="font-serif italic font-light text-lg sm:text-xl leading-none tracking-[0.01em] text-[var(--fg)] group-hover:text-[var(--color-gold-300)] transition-colors duration-300">
-              mohamed zaher
+            <span className="font-wordmark text-xl sm:text-2xl leading-none tracking-[0.08em] text-[var(--fg)] group-hover:text-[var(--color-gold-200)] transition-colors duration-300">
+              Mohamed Zaher
             </span>
           </Link>
 

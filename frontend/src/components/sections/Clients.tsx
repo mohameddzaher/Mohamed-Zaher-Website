@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { CLIENT_LOGOS, type ClientLogo } from "@/lib/data";
@@ -12,24 +12,38 @@ function brandWordmark(c: ClientLogo): string {
   return c.name;
 }
 
+/**
+ * Tries each remote logo URL in order. After all remote attempts fail,
+ * tries `/clients/{slug}.svg` then `/clients/{slug}.png` from /public/clients.
+ * If everything fails, renders a styled wordmark of the brand name.
+ */
 function ClientLogoTile({ c, tone }: { c: ClientLogo; tone: "dark" | "light" }) {
-  const [logoFailed, setLogoFailed] = useState(false);
-  const showLogo = c.logo && !logoFailed;
+  const sources = useMemo(
+    () => [
+      ...c.logos,
+      `/clients/${c.slug}.svg`,
+      `/clients/${c.slug}.png`,
+    ],
+    [c],
+  );
+  const [idx, setIdx] = useState(0);
+  const exhausted = idx >= sources.length;
   const weight = c.wordmark?.weight ?? 700;
 
   return (
-    <div className="shrink-0 flex items-center justify-center px-6 py-4 panel rounded-lg min-w-[180px] h-16 group">
-      {showLogo ? (
+    <div className="shrink-0 flex items-center justify-center px-7 py-4 panel rounded-xl min-w-[200px] h-20 group hairline">
+      {!exhausted ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
-          src={c.logo!}
+          src={sources[idx]}
           alt={c.name}
           loading="lazy"
-          onError={() => setLogoFailed(true)}
-          className={`max-h-8 max-w-[140px] object-contain transition-all duration-200 ${
+          decoding="async"
+          onError={() => setIdx((i) => i + 1)}
+          className={`max-h-10 max-w-[150px] object-contain transition-all duration-300 ${
             tone === "light"
-              ? "opacity-80 group-hover:opacity-100"
-              : "opacity-70 group-hover:opacity-100"
+              ? "opacity-70 group-hover:opacity-100"
+              : "opacity-60 group-hover:opacity-100"
           }`}
         />
       ) : (
@@ -60,20 +74,20 @@ export function Clients({ tone = "dark" }: { tone?: "dark" | "light" }) {
       tone={tone}
       eyebrow={t("eyebrow")}
       title={t("title")}
-      className="py-14 md:py-16"
+      className="py-20 md:py-24"
     >
       <div className="relative overflow-hidden">
         <div
           aria-hidden
-          className="absolute inset-y-0 left-0 w-16 z-10 bg-gradient-to-r from-[var(--section-bg)] to-transparent"
+          className="absolute inset-y-0 left-0 w-20 z-10 bg-gradient-to-r from-[var(--section-bg)] to-transparent"
         />
         <div
           aria-hidden
-          className="absolute inset-y-0 right-0 w-16 z-10 bg-gradient-to-l from-[var(--section-bg)] to-transparent"
+          className="absolute inset-y-0 right-0 w-20 z-10 bg-gradient-to-l from-[var(--section-bg)] to-transparent"
         />
-        <div className="flex gap-6 animate-marquee will-change-transform">
+        <div className="flex gap-8 animate-marquee will-change-transform">
           {items.map((c, i) => (
-            <ClientLogoTile key={`${c.name}-${i}`} c={c} tone={tone} />
+            <ClientLogoTile key={`${c.slug}-${i}`} c={c} tone={tone} />
           ))}
         </div>
       </div>

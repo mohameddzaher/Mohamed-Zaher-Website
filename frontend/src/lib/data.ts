@@ -664,8 +664,13 @@ export const SPEAKING: SpeakingEntry[] = [
 
 export type ClientLogo = {
   name: string;
-  /** SVG URL — falls back to wordmark if 404 */
-  logo: string | null;
+  /** Slug used to look up a manually uploaded logo at /clients/{slug}.png|svg */
+  slug: string;
+  /**
+   * Remote logo sources tried in order. First successful one wins.
+   * Last fallback is /clients/{slug}.svg → /clients/{slug}.png (local) → wordmark text.
+   */
+  logos: string[];
   /** Brand colour for wordmark fallback */
   brandColor: string;
   /** Wordmark style override (font weight / case) */
@@ -675,37 +680,59 @@ export type ClientLogo = {
 export const CLIENT_LOGOS: ClientLogo[] = [
   {
     name: "Amazon",
-    logo: "https://cdn.simpleicons.org/amazon/FF9900",
+    slug: "amazon",
+    logos: [
+      "https://cdn.simpleicons.org/amazon/FF9900",
+      "https://logo.clearbit.com/amazon.com",
+    ],
     brandColor: "#FF9900",
     wordmark: { weight: 700, case: "lower" },
   },
   {
     name: "DHL",
-    logo: "https://cdn.simpleicons.org/dhl/D40511",
+    slug: "dhl",
+    logos: [
+      "https://cdn.simpleicons.org/dhl/D40511",
+      "https://logo.clearbit.com/dhl.com",
+    ],
     brandColor: "#D40511",
     wordmark: { weight: 800, case: "upper" },
   },
   {
     name: "Keeta",
-    logo: null,
+    slug: "keeta",
+    logos: [
+      "https://logo.clearbit.com/keeta.com",
+      "https://logo.clearbit.com/keeta.sa",
+    ],
     brandColor: "#FFD500",
     wordmark: { weight: 800, case: "title" },
   },
   {
     name: "HungerStation",
-    logo: null,
+    slug: "hungerstation",
+    logos: [
+      "https://logo.clearbit.com/hungerstation.com",
+    ],
     brandColor: "#F4A700",
     wordmark: { weight: 700, case: "title" },
   },
   {
     name: "Ninja",
-    logo: null,
+    slug: "ninja",
+    logos: [
+      "https://logo.clearbit.com/ninja.com",
+      "https://logo.clearbit.com/getninja.com",
+    ],
     brandColor: "#E11D48",
     wordmark: { weight: 700, case: "title" },
   },
   {
     name: "NexTracker",
-    logo: null,
+    slug: "nextracker",
+    logos: [
+      "https://logo.clearbit.com/nextracker.com",
+    ],
     brandColor: "#0096D6",
     wordmark: { weight: 800, case: "title" },
   },

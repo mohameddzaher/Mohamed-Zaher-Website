@@ -4,6 +4,7 @@ import {
   Space_Grotesk,
   Bricolage_Grotesque,
   Cormorant_Garamond,
+  Italiana,
   JetBrains_Mono,
   IBM_Plex_Sans_Arabic,
 } from "next/font/google";
@@ -36,6 +37,13 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
+});
+
+const italiana = Italiana({
+  subsets: ["latin"],
+  variable: "--font-italiana",
+  display: "swap",
+  weight: ["400"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -108,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       suppressHydrationWarning
-      className={`${inter.variable} ${spaceGrotesk.variable} ${bricolage.variable} ${cormorant.variable} ${jetbrains.variable} ${arabic.variable}`}
+      className={`${inter.variable} ${spaceGrotesk.variable} ${bricolage.variable} ${cormorant.variable} ${italiana.variable} ${jetbrains.variable} ${arabic.variable}`}
     >
       <body>
         <JsonLd />

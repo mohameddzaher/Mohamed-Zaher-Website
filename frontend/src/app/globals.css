@@ -163,6 +163,14 @@ h1, h2, h3, h4 {
 .font-serif { font-family: var(--font-serif); }
 [dir="rtl"] .font-serif { font-family: var(--font-arabic); }
 
+/* Italiana — extra-luxury wordmark font (jewelry/hotel/fashion vibe) */
+.font-wordmark {
+  font-family: var(--font-italiana), "Italiana", "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+[dir="rtl"] .font-wordmark { font-family: var(--font-arabic); }
+
 ::selection { background: var(--color-gold-400); color: var(--color-ink-950); }
 
 /* Scrollbar — quiet champagne */
