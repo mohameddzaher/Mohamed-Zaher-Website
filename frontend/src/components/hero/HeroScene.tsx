@@ -236,9 +236,15 @@ export function HeroScene() {
     const noise3D = createNoise3D();
     let frame = 0;
     let raf = 0;
+    let visible = true;
+    let docVisible = true;
     const startTime = performance.now();
 
-    const animate = () => {
+    function animate() {
+      if (!visible || !docVisible) {
+        raf = 0;
+        return;
+      }
       raf = requestAnimationFrame(animate);
       const elapsed = performance.now() - startTime;
 
@@ -336,11 +342,33 @@ export function HeroScene() {
       }
 
       composer.render();
+    }
+
+    /* Pause the rAF loop while the hero is off-screen — once the user
+       scrolls past the fold the heavy Three.js work no longer competes
+       with scroll handlers on the main thread. Resumes when scrolled
+       back into view or when the tab regains focus. */
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry?.isIntersecting ?? false;
+        if (visible && docVisible && !raf) animate();
+      },
+      { threshold: 0 },
+    );
+    io.observe(mount);
+
+    const onVisChange = () => {
+      docVisible = !document.hidden;
+      if (docVisible && visible && !raf) animate();
     };
+    document.addEventListener("visibilitychange", onVisChange);
+
     animate();
 
     return () => {
-      cancelAnimationFrame(raf);
+      if (raf) cancelAnimationFrame(raf);
+      io.disconnect();
+      document.removeEventListener("visibilitychange", onVisChange);
       window.removeEventListener("mousemove", onMouseMove);
       window.removeEventListener("resize", onResize);
 

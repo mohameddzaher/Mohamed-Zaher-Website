@@ -40,10 +40,10 @@ export function Section({
       <div className={cn("container-x", containerClassName)}>
         {(eyebrow || title || description) && (
           <motion.header
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.15, margin: "-60px" }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true, amount: 0.1, margin: "0px 0px -10% 0px" }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
             className={cn(
               "mb-14 md:mb-16 max-w-3xl",
               align === "center" && "mx-auto text-center",

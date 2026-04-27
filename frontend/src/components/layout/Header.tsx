@@ -27,10 +27,25 @@ export function Header() {
   }, [hydrate]);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    let raf = 0;
+    let last = false;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        const next = window.scrollY > 24;
+        if (next !== last) {
+          last = next;
+          setScrolled(next);
+        }
+        raf = 0;
+      });
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   useEffect(() => {
@@ -82,17 +97,13 @@ export function Header() {
   if (inAppShell) return null;
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-200 ease-[cubic-bezier(0.16,1,0.3,1)]",
-        scrolled ? "py-2" : "py-3",
-      )}
-    >
+    <header className="fixed top-0 inset-x-0 z-50 py-3">
       <div className="container-x">
         <div
           className={cn(
-            "flex items-center justify-between gap-4 px-3 md:px-4 py-2 rounded-xl transition-all duration-200",
-            scrolled ? "glass-strong" : "bg-transparent",
+            "flex h-12 items-center justify-between gap-4 px-3 md:px-4 rounded-xl",
+            "transition-[background-color,backdrop-filter,border-color,box-shadow] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]",
+            scrolled ? "glass-strong" : "bg-transparent border border-transparent",
           )}
         >
           <Link
@@ -151,7 +162,7 @@ export function Header() {
                   className="hidden md:inline-flex items-center gap-2 ps-1 pe-2 py-1 rounded-full panel hover:border-[var(--color-gold-400)]/40 transition-colors duration-150"
                   aria-label="User menu"
                   aria-haspopup="menu"
-                  aria-expanded={userOpen ? "true" : "false"}
+                  aria-expanded={userOpen}
                 >
                   <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--color-gold-400)] to-[var(--color-gold-600)] text-white text-[10px] font-bold">
                     {initials}
