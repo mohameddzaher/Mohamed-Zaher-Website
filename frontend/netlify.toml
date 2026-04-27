@@ -1,12 +1,18 @@
 [build]
   base = "frontend"
-  command = "npm install --legacy-peer-deps && npm run build"
+  # --include=dev is required: Netlify sets NODE_ENV=production before
+  # `npm install`, which would otherwise skip devDependencies (postcss,
+  # tailwindcss, @tailwindcss/postcss, types) that next build needs.
+  command = "npm install --legacy-peer-deps --include=dev && npm run build"
   publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
   NEXT_TELEMETRY_DISABLED = "1"
+  # Force npm to install devDependencies even when Netlify sets
+  # NODE_ENV=production. Belt-and-suspenders with --include=dev above.
+  NPM_CONFIG_PRODUCTION = "false"
 
 # Official Next.js plugin — handles SSR, ISR, image optimization, edge middleware
 [[plugins]]
@@ -39,11 +45,3 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
-
-# Production context
-[context.production.environment]
-  NODE_ENV = "production"
-
-# Deploy preview context
-[context.deploy-preview.environment]
-  NODE_ENV = "production"
