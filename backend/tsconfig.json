@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "node16",
+    "moduleResolution": "node16",
     "lib": ["ES2022"],
     "outDir": "./dist",
     "rootDir": "./src",
@@ -15,14 +15,10 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "declaration": false,
-    "sourceMap": true,
+    "sourceMap": false,
     "removeComments": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["*"]
-    }
+    "emitDecoratorMetadata": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
