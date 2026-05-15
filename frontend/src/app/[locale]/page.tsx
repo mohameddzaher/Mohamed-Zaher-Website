@@ -2,6 +2,7 @@ import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/hero/Hero";
 import { About } from "@/components/sections/About";
 import { Opportunities } from "@/components/sections/Opportunities";
+import { Services } from "@/components/sections/Services";
 import { Ventures } from "@/components/sections/Ventures";
 import { Projects } from "@/components/sections/Projects";
 import { Clients } from "@/components/sections/Clients";
@@ -27,10 +28,11 @@ export default async function Home({
       <About tone="light" compact />
       <Ventures tone="dark" compact limit={3} />
       <Opportunities tone="light" />
-      <Projects tone="dark" compact limit={6} />
-      <Clients tone="light" />
-      <Reviews tone="dark" />
-      <Newsletter tone="light" />
+      <Services tone="dark" />
+      <Projects tone="light" compact limit={6} />
+      <Clients tone="dark" />
+      <Reviews tone="light" />
+      <Newsletter tone="dark" />
     </>
   );
 }

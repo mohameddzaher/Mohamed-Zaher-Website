@@ -41,7 +41,13 @@
     "pageHeaderDescription": "1999. 30+ projects. Four ventures. Always building.",
     "lead": "I'm Mohamed Zaher — a tech entrepreneur driving business growth through strategy, partnerships, and execution. I bring an entrepreneurial mindset that combines commercial vision with deep technology understanding — turning market opportunities into well-structured businesses, platforms, and long-term value, with technology positioned as a core enabler. CTO at ETS, founder at Tapix Electronics and Dida Silver, BD consultant at Gulf Trend, and account manager for Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker through Energize Logistics. I'm always exploring new ventures, investments, and strategic partnerships — if you have capital looking for a founder, a problem looking for a builder, or a vision looking for execution, let's talk.",
     "quote": "Code solves problems. Business scales solutions.",
-    "values": ["Strategy", "Execution", "Tech + Business", "Partnerships", "Always Learning"],
+    "values": [
+      "Strategy",
+      "Execution",
+      "Tech + Business",
+      "Partnerships",
+      "Always Learning"
+    ],
     "view_full": "Read full bio",
     "status_open": "Open for new ventures"
   },
@@ -75,6 +81,40 @@
         "desc": "Board advisory, technical consulting, and business development retainers — available."
       }
     }
+  },
+  "Services": {
+    "eyebrow": "How I Work With Companies",
+    "title": "Turn How Your Company Runs |Into a System",
+    "description": "Most companies don't have a tools problem — they have a structure problem. I work hands-on with teams to turn scattered, person-dependent operations into documented systems, clear workflows, and a setup that scales without chaos — pairing real business development experience with the engineering to build whatever the business actually needs.",
+    "cards": {
+      "diagnose": {
+        "title": "Know Where You Stand",
+        "desc": "Before anything, a clear read of where the company actually stands — operations, market position, and what's quietly slowing growth."
+      },
+      "systems": {
+        "title": "Build Real Systems",
+        "desc": "Turn ad-hoc, person-dependent work into documented systems that run the same way every time — and don't break when someone leaves."
+      },
+      "workflows": {
+        "title": "Design Workflows",
+        "desc": "Map every process end to end, cut the dead steps, and automate the repetitive work so the team focuses on what matters."
+      },
+      "productivity": {
+        "title": "Lift Productivity",
+        "desc": "Remove the friction, handoffs, and waiting that drain output — measurable gains in how much the team actually ships."
+      },
+      "bridge": {
+        "title": "Business + Tech in One",
+        "desc": "A rare mix: business development instinct with engineering skill — so technical decisions serve real business outcomes, not the reverse."
+      },
+      "software": {
+        "title": "Build the Tools You Need",
+        "desc": "When off-the-shelf software doesn't fit, I build the internal platforms, dashboards, and automations tailored to how the company actually works."
+      }
+    },
+    "ctaTitle": "Running a company that needs this kind of structure?",
+    "ctaDesc": "Tell me how the business runs today — I'll show you where the system breaks and how to fix it.",
+    "ctaButton": "Let's Talk"
   },
   "Skills": {
     "eyebrow": "Capabilities",
@@ -245,7 +285,13 @@
       "whatsapp_label": "WhatsApp",
       "whatsapp_hint": "Tap to chat directly"
     },
-    "budgets": ["< $5k", "$5k – $15k", "$15k – $50k", "$50k – $100k", "$100k+"],
+    "budgets": [
+      "< $5k",
+      "$5k – $15k",
+      "$15k – $50k",
+      "$50k – $100k",
+      "$100k+"
+    ],
     "inquiries": [
       "Investment Opportunity",
       "Partnership Proposal",
@@ -254,16 +300,44 @@
       "Speaking Engagement",
       "General Message"
     ],
-    "types": ["Web App", "E-Commerce", "SaaS Platform", "Mobile App", "Consulting", "Other"]
+    "types": [
+      "Web App",
+      "E-Commerce",
+      "SaaS Platform",
+      "Mobile App",
+      "Consulting",
+      "Other"
+    ]
   },
   "PageHeaders": {
-    "about": { "title": "Engineer by craft. |Entrepreneur by mindset.", "description": "1999. 30+ projects. Four ventures. Always building." },
-    "ventures": { "title": "Companies I |Build & Lead", "description": "Active ventures across SaaS, e-commerce, logistics, and consulting — with partnerships including Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker." },
-    "projects": { "title": "Projects & |Platforms", "description": "Production systems, e-commerce storefronts, real estate marketplaces, EdTech apps, and internal business tools." },
-    "experience": { "title": "A timeline of |building.", "description": "Roles, ventures, and teaching engagements — with the capability tracks that back them." },
-    "insights": { "title": "Notes from |the build", "description": "Lessons from shipping products, running ventures, and operating across KSA, Egypt, and the GCC." },
-    "contact": { "title": "Let's build |something together", "description": "Tell me about your idea, your capital, or the problem you need solved. Usually within 24 hours." },
-    "book": { "title": "Pick a time. |Let's talk.", "description": "Choose any open slot — confirmation is instant." }
+    "about": {
+      "title": "Engineer by craft. |Entrepreneur by mindset.",
+      "description": "1999. 30+ projects. Four ventures. Always building."
+    },
+    "ventures": {
+      "title": "Companies I |Build & Lead",
+      "description": "Active ventures across SaaS, e-commerce, logistics, and consulting — with partnerships including Amazon Prime, DHL, Keeta, HungerStation, Ninja, and NexTracker."
+    },
+    "projects": {
+      "title": "Projects & |Platforms",
+      "description": "Production systems, e-commerce storefronts, real estate marketplaces, EdTech apps, and internal business tools."
+    },
+    "experience": {
+      "title": "A timeline of |building.",
+      "description": "Roles, ventures, and teaching engagements — with the capability tracks that back them."
+    },
+    "insights": {
+      "title": "Notes from |the build",
+      "description": "Lessons from shipping products, running ventures, and operating across KSA, Egypt, and the GCC."
+    },
+    "contact": {
+      "title": "Let's build |something together",
+      "description": "Tell me about your idea, your capital, or the problem you need solved. Usually within 24 hours."
+    },
+    "book": {
+      "title": "Pick a time. |Let's talk.",
+      "description": "Choose any open slot — confirmation is instant."
+    }
   },
   "Footer": {
     "tagline": "Building. Scaling. Always open.",
